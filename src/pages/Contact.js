@@ -11,7 +11,6 @@ export default function Contact() {
   const [phone, setPhone] = useState("");
 
   const mapLink = "https://maps.google.com/?q=Andhra%20Pradesh";
-  const address = "Andhra Pradesh • Telangana • Karnataka";
   const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent("Andhra Pradesh")}&output=embed`;
 
   const services = [
@@ -107,7 +106,13 @@ export default function Contact() {
                 <div className="contact8-card-sub">Tap to email</div>
               </a>
 
-              <a className="contact8-card" href="https://instagram.com/inchx_interio" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <a
+                className="contact8-card"
+                href="https://instagram.com/inchx_interio"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+              >
                 <div className="contact8-card-kicker">Instagram</div>
                 <div className="contact8-card-main">@inchx_interio</div>
                 <div className="contact8-card-sub">Tap to open</div>

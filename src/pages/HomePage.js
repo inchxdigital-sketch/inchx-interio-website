@@ -3,24 +3,19 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { FaHome, FaBuilding, FaRegBuilding } from "react-icons/fa";
 
 function HomePage() {
-  const slides = Array.from({ length: 8 }, (_, i) => `/Images/interior${i + 1}.jpg`);
-
   return (
     <>
       <Navbar />
       <main className="home">
-
         <section className="hero-section">
           <div className="image-container">
-            <img src="/Images/house1.jpg" alt="Admin Image 1" className="image1" />
-            <img src="/Images/house2.jpg" alt="Admin Image 2" className="image2" />
+            <img src="/Images/house1.jpg" alt="Admin 1" className="image1" />
+            <img src="/Images/house2.jpg" alt="Admin 2" className="image2" />
           </div>
 
           <div className="text-container">
@@ -39,7 +34,9 @@ function HomePage() {
             <div className="services-head">
               <h2 className="services-title">Services We Provide</h2>
               <div className="services-underline" />
-              <p className="services-sub">Design that looks premium, planning that feels simple, execution that stays clean.</p>
+              <p className="services-sub">
+                Design that looks premium, planning that feels simple, execution that stays clean.
+              </p>
             </div>
 
             <div className="services-grid">
@@ -152,15 +149,12 @@ function HomePage() {
 
             <p className="hero-subtitle">
               From concept to finish, we design spaces that look premium and live better.
-
-              Smart layouts, elegant materials, warm lighting, and clean <br />detailing.
-
+              Smart layouts, elegant materials, warm lighting, and clean <br />
+              detailing.
               Made for your routine, your comfort, and your style.
             </p>
           </div>
         </section>
-
-
 
         <section className="split-banner-section" aria-label="Explore categories">
           <div className="split-banner-inner">
@@ -180,35 +174,35 @@ function HomePage() {
               <div className="split-right">
                 <Link to="/products" className="split-right-card">
                   <div className="split-right-media">
-                    <img src="/Images/right.jpg" alt="Luxury Living Room" />
+                    <img src="/Images/right.jpg" alt="Luxury living room" />
                   </div>
                   <p className="split-right-text">Luxury Living Room</p>
                 </Link>
 
                 <Link to="/products" className="split-right-card">
                   <div className="split-right-media">
-                    <img src="/Images/right1.jpg" alt="Modular Kitchen" />
+                    <img src="/Images/right1.jpg" alt="Modular kitchen" />
                   </div>
                   <p className="split-right-text">Modular Kitchen</p>
                 </Link>
 
                 <Link to="/products" className="split-right-card">
                   <div className="split-right-media">
-                    <img src="/Images/right2.jpg" alt="Facade Design" />
+                    <img src="/Images/right2.jpg" alt="Facade design" />
                   </div>
                   <p className="split-right-text">Facade Design</p>
                 </Link>
 
                 <Link to="/products" className="split-right-card">
                   <div className="split-right-media">
-                    <img src="/Images/right3.jpg" alt="Bed Room Design" />
+                    <img src="/Images/right3.jpg" alt="Bedroom design" />
                   </div>
                   <p className="split-right-text">Bed Room Design</p>
                 </Link>
 
                 <Link to="/products" className="split-right-card">
                   <div className="split-right-media">
-                    <img src="/Images/right4.jpg" alt="Ceiling Design" />
+                    <img src="/Images/right4.jpg" alt="Ceiling design" />
                   </div>
                   <p className="split-right-text">Ceiling Design</p>
                 </Link>
@@ -224,9 +218,6 @@ function HomePage() {
           </div>
         </section>
 
-
-
-
         <section className="home-part-grid" aria-label="Highlights">
           <div className="home-part-inner">
             <div className="home-part-card">
@@ -235,7 +226,9 @@ function HomePage() {
 
             <div className="home-part-text">
               <h3 className="home-part-title">INTERIOR DESIGNING</h3>
-              <Link to="/services" className="home-part-btn">View Details →</Link>
+              <Link to="/services" className="home-part-btn">
+                View Details →
+              </Link>
             </div>
 
             <div className="home-part-card">
@@ -244,12 +237,16 @@ function HomePage() {
 
             <div className="home-part-text">
               <h3 className="home-part-title">3D DESIGNING</h3>
-              <Link to="/services" className="home-part-btn">View Details →</Link>
+              <Link to="/services" className="home-part-btn">
+                View Details →
+              </Link>
             </div>
 
             <div className="home-part-text">
               <h3 className="home-part-title">MODULAR KITCHENS</h3>
-              <Link to="/services" className="home-part-btn">View Details →</Link>
+              <Link to="/services" className="home-part-btn">
+                View Details →
+              </Link>
             </div>
 
             <div className="home-part-card">
@@ -258,7 +255,9 @@ function HomePage() {
 
             <div className="home-part-text">
               <h3 className="home-part-title">PLANNING & EXECUTION</h3>
-              <Link to="/services" className="home-part-btn">View Details →</Link>
+              <Link to="/services" className="home-part-btn">
+                View Details →
+              </Link>
             </div>
 
             <div className="home-part-card">
@@ -267,12 +266,6 @@ function HomePage() {
           </div>
         </section>
 
-
-
-
-
-
-
         <section className="visit-card" aria-label="Visiting card">
           <div className="visit-card-inner">
             <h2 className="visit-card-title">Kalki&apos;s Inchx Interio</h2>
@@ -280,7 +273,9 @@ function HomePage() {
             <div className="visit-card-body">
               <div className="visit-card-left">
                 <div className="visit-card-brand">Interior designing, 3D designing, planning and execution</div>
-                <div className="visit-card-tagline">Excellence at your door step, built with detail, comfort, and clean finishing.</div>
+                <div className="visit-card-tagline">
+                  Excellence at your door step, built with detail, comfort, and clean finishing.
+                </div>
 
                 <div className="visit-card-points">
                   <div className="visit-card-point">
@@ -322,7 +317,11 @@ function HomePage() {
               </div>
 
               <div className="visit-card-right" aria-label="Visiting card image">
-                <img className="visit-card-img" src="/Images/visiting-card1.jpg" alt="Kalki's Inchx Interio visiting card" />
+                <img
+                  className="visit-card-img"
+                  src="/Images/visiting-card1.jpg"
+                  alt="Kalki's Inchx Interio visiting card"
+                />
                 <div className="visit-card-frame" />
               </div>
             </div>
@@ -332,48 +331,39 @@ function HomePage() {
         <section className="three-clock-section">
           <div className="three-clock-grid">
             <div className="three-clock-card">
-              <img
-                src="/Images/clock1.jpg"
-                alt="Interior design service"
-                className="three-clock-img"
-              />
+              <img src="/Images/clock1.jpg" alt="Interior design service" className="three-clock-img" />
               <div className="three-clock-overlay" />
               <div className="three-clock-content">
                 <h3 className="three-clock-title">Interior Designing</h3>
                 <p className="three-clock-desc">
                   Thoughtful, elegant interiors tailored to your lifestyle, space, and budget.
                 </p>
-                <Link to="/services" className="three-clock-btn">Explore Services →</Link>
+                <Link to="/services" className="three-clock-btn">
+                  Explore Services →
+                </Link>
               </div>
             </div>
 
             <div className="three-clock-card three-clock-center">
-              <img
-                src="/Images/clock2.jpg"
-                alt="Design showcase"
-                className="three-clock-img"
-              />
+              <img src="/Images/clock2.jpg" alt="Design showcase" className="three-clock-img" />
               <div className="three-clock-overlay" />
             </div>
 
             <div className="three-clock-card">
-              <img
-                src="/Images/clock3.jpg"
-                alt="Execution and modular kitchen service"
-                className="three-clock-img"
-              />
+              <img src="/Images/clock3.jpg" alt="Execution and modular kitchen service" className="three-clock-img" />
               <div className="three-clock-overlay" />
               <div className="three-clock-content">
                 <h3 className="three-clock-title">Planning & Execution</h3>
                 <p className="three-clock-desc">
                   End to end execution with clear timelines, quality finishes, and zero chaos.
                 </p>
-                <Link to="/contact" className="three-clock-btn">Get a Quote →</Link>
+                <Link to="/contact" className="three-clock-btn">
+                  Get a Quote →
+                </Link>
               </div>
             </div>
           </div>
         </section>
-
 
         <section className="signature-sec">
           <div className="signature-inner">
@@ -567,7 +557,8 @@ function HomePage() {
               Excellence <br /> At Your <br /> Doorstep
             </div>
             <p className="theme-band-desc">
-              Interior designing, 3D design, modular kitchens, and end to end execution with premium finishing across Andhra Pradesh, Telangana, and Karnataka.
+              Interior designing, 3D design, modular kitchens, and end to end execution with premium finishing across
+              Andhra Pradesh, Telangana, and Karnataka.
             </p>
           </div>
 
