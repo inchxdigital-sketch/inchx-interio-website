@@ -5,25 +5,25 @@ import Navbar from "./Navbar";
 
 function Services() {
   const marqueeRow1 = [
-    "interior1.jpg",
-    "interior2.jpg",
-    "interior3.jpg",
-    "interior4.jpg",
-    "interior5.jpg",
-    "interior6.jpg",
-    "interior7.jpg",
-    "interior8.jpg",
+    "living-1.jpeg",
+    "living-2.jpeg",
+    "living-3.jpeg",
+    "living-4.jpeg",
+    "living-5.jpeg",
+    "living-6.jpeg",
+    "living-7.jpeg",
+    "living-8.jpeg",
   ];
 
   const marqueeRow2 = [
-    "show1.jpg",
-    "show2.jpg",
-    "show3.jpg",
-    "show4.jpg",
-    "show6.jpg",
-    "show7.jpg",
-    "show8.jpg",
-    "show9.jpg",
+    "bedroom-1.jpeg",
+    "bedroom-2.jpeg",
+    "bedroom-3.jpeg",
+    "bedroom-4.jpeg",
+    "bedroom-5.jpeg",
+    "bedroom-6.jpeg",
+    "bedroom-7.jpeg",
+    "bedroom-8.jpeg",
   ];
 
   return (
@@ -68,7 +68,7 @@ function Services() {
         <section className="brandstrip" aria-label="Brand intro">
           <div className="brandstrip-inner">
             <div className="brandstrip-left">
-              <h2 className="section-title">KALKI’S Signature Work</h2>
+              <h2 className="section-title">INCHX Signature Work</h2>
               <div className="section-underline" />
               <p className="section-sub">
                 We design interiors that feel premium, practical, and calm. From the first 3D view to the final finish,
@@ -94,16 +94,16 @@ function Services() {
             <div className="brandstrip-right" aria-label="Brand images">
               <div className="brandstrip-gallery">
                 <figure className="imgcard">
-                  <img src="/Images/final1.jpg" alt="Interior finish" />
+                  <img src="/Images/own/house1.jpeg" alt="Interior finish" />
                 </figure>
                 <figure className="imgcard">
-                  <img src="/Images/final2.jpg" alt="Premium detailing" />
+                  <img src="/Images/own/house2.jpeg" alt="Premium detailing" />
                 </figure>
                 <figure className="imgcard">
-                  <img src="/Images/featured.jpg" alt="Featured interior" />
+                  <img src="/Images/own/featured.jpeg" alt="Featured interior" />
                 </figure>
                 <figure className="imgcard">
-                  <img src="/Images/clock3.jpg" alt="Theme and mood" />
+                  <img src="/Images/own/clock2.jpeg" alt="Theme and mood" />
                 </figure>
               </div>
             </div>
@@ -269,7 +269,7 @@ function Services() {
 
               <div className="regions-right" aria-label="Regions visuals">
                 <div className="regions-visual">
-                  <img src="/Images/house1.jpg" alt="Exterior showcase" />
+                  <img src="/Images/own/house1.jpeg" alt="Exterior showcase" />
                   <div className="regions-float">
                     <div className="regions-float-title">Book a Site Visit</div>
                     <div className="regions-float-sub">Call +91 9393141224</div>
@@ -290,7 +290,7 @@ function Services() {
 
             <div className="featured-grid">
               <article className="featured-card">
-                <img src="/Images/grid1.jpg" alt="Lighting and ceiling finish" />
+                <img src="/Images/own/house1.jpeg" alt="Lighting and ceiling finish" />
                 <div className="featured-cap">
                   <div className="featured-cap-title">Ceiling & Lighting</div>
                   <div className="featured-cap-sub">Balanced light, neat finishing.</div>
@@ -338,7 +338,7 @@ function Services() {
               <div className="marquee-row marquee-row-a" aria-hidden="true">
                 {[...marqueeRow1, ...marqueeRow1].map((img, idx) => (
                   <div className="marquee-card" key={`a-${idx}`}>
-                    <img src={`/Images/${img}`} alt="" />
+                    <img src={`/Images/own/${img}`} alt="" />
                   </div>
                 ))}
               </div>
@@ -346,7 +346,7 @@ function Services() {
               <div className="marquee-row marquee-row-b" aria-hidden="true">
                 {[...marqueeRow2, ...marqueeRow2].map((img, idx) => (
                   <div className="marquee-card" key={`b-${idx}`}>
-                    <img src={`/Images/${img}`} alt="" />
+                    <img src={`/Images/own/${img}`} alt="" />
                   </div>
                 ))}
               </div>

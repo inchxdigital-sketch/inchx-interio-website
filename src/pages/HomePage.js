@@ -14,12 +14,11 @@ function HomePage() {
       <main className="home">
         <section className="hero-section">
           <div className="image-container">
-            <img src="/Images/house1.jpg" alt="Admin 1" className="image1" />
-            <img src="/Images/house2.jpg" alt="Admin 2" className="image2" />
+            <img src="/Images/own/house1.jpeg" alt="Admin 1" className="image1" />
+            <img src="/Images/own/house2.jpeg" alt="Admin 2" className="image2" />
           </div>
 
           <div className="text-container">
-            <h6 className="small-text">KALKI'S</h6>
             <h1 className="crafted-text">Crafted By You</h1>
             <h1 className="built-text">Built By Us</h1>
             <h4 className="description-title">Excellence aat your door step</h4>
@@ -42,7 +41,7 @@ function HomePage() {
             <div className="services-grid">
               <article className="service-card">
                 <div className="service-media">
-                  <img src="/Images/services-1.jpg" alt="Interior designing" />
+                  <img src="/Images/own/services-1.jpeg" alt="Interior designing" />
                 </div>
                 <div className="service-body">
                   <h3 className="service-h">Interior Designing</h3>
@@ -57,7 +56,7 @@ function HomePage() {
 
               <article className="service-card">
                 <div className="service-media">
-                  <img src="/Images/services-2.jpg" alt="3D designing" />
+                  <img src="/Images/own/services-2.jpeg" alt="3D designing" />
                 </div>
                 <div className="service-body">
                   <h3 className="service-h">3D Designing</h3>
@@ -72,7 +71,7 @@ function HomePage() {
 
               <article className="service-card">
                 <div className="service-media">
-                  <img src="/Images/services-3.jpg" alt="Modular kitchens" />
+                  <img src="/Images/own/services-3.jpeg" alt="Modular kitchens" />
                 </div>
                 <div className="service-body">
                   <h3 className="service-h">Modular Kitchens</h3>
@@ -102,7 +101,7 @@ function HomePage() {
 
               <article className="service-card">
                 <div className="service-media">
-                  <img src="/Images/services-5.jpg" alt="Facade designing" />
+                  <img src="/Images/own/services-5.jpeg" alt="Facade designing" />
                 </div>
                 <div className="service-body">
                   <h3 className="service-h">Facade Designing</h3>
@@ -168,34 +167,34 @@ function HomePage() {
 
             <div className="split-body">
               <div className="split-left">
-                <img src="/Images/featured.jpg" alt="Featured interior collection" />
+                <img src="/Images/own/featured.jpeg" alt="Featured interior collection" />
               </div>
 
               <div className="split-right">
                 <Link to="/products" className="split-right-card">
                   <div className="split-right-media">
-                    <img src="/Images/right.jpg" alt="Luxury living room" />
+                    <img src="/Images/own/right.jpeg" alt="Luxury living room" />
                   </div>
                   <p className="split-right-text">Luxury Living Room</p>
                 </Link>
 
                 <Link to="/products" className="split-right-card">
                   <div className="split-right-media">
-                    <img src="/Images/right1.jpg" alt="Modular kitchen" />
+                    <img src="/Images/own/right1.jpeg" alt="Modular kitchen" />
                   </div>
                   <p className="split-right-text">Modular Kitchen</p>
                 </Link>
 
                 <Link to="/products" className="split-right-card">
                   <div className="split-right-media">
-                    <img src="/Images/right2.jpg" alt="Facade design" />
+                    <img src="/Images/own/right2.jpeg" alt="Facade design" />
                   </div>
                   <p className="split-right-text">Facade Design</p>
                 </Link>
 
                 <Link to="/products" className="split-right-card">
                   <div className="split-right-media">
-                    <img src="/Images/right3.jpg" alt="Bedroom design" />
+                    <img src="/Images/own/right3.jpeg" alt="Bedroom design" />
                   </div>
                   <p className="split-right-text">Bed Room Design</p>
                 </Link>
@@ -221,7 +220,7 @@ function HomePage() {
         <section className="home-part-grid" aria-label="Highlights">
           <div className="home-part-inner">
             <div className="home-part-card">
-              <img src="/Images/grid7.jpg" alt="Interior designing" className="home-part-img" />
+              <img src="/Images/own/grid7.jpeg" alt="Interior designing" className="home-part-img" />
             </div>
 
             <div className="home-part-text">
@@ -268,7 +267,7 @@ function HomePage() {
 
         <section className="visit-card" aria-label="Visiting card">
           <div className="visit-card-inner">
-            <h2 className="visit-card-title">Kalki&apos;s Inchx Interio</h2>
+            <h2 className="visit-card-title"> Inchx Interio</h2>
 
             <div className="visit-card-body">
               <div className="visit-card-left">
@@ -319,7 +318,7 @@ function HomePage() {
               <div className="visit-card-right" aria-label="Visiting card image">
                 <img
                   className="visit-card-img"
-                  src="/Images/visiting-card1.jpg"
+                  src="/Images/own/visiting-card1.jpeg"
                   alt="Kalki's Inchx Interio visiting card"
                 />
                 <div className="visit-card-frame" />
@@ -331,7 +330,7 @@ function HomePage() {
         <section className="three-clock-section">
           <div className="three-clock-grid">
             <div className="three-clock-card">
-              <img src="/Images/clock1.jpg" alt="Interior design service" className="three-clock-img" />
+              <img src="/Images/own/clock1.jpeg" alt="Interior design service" className="three-clock-img" />
               <div className="three-clock-overlay" />
               <div className="three-clock-content">
                 <h3 className="three-clock-title">Interior Designing</h3>
@@ -350,7 +349,7 @@ function HomePage() {
             </div>
 
             <div className="three-clock-card">
-              <img src="/Images/clock3.jpg" alt="Execution and modular kitchen service" className="three-clock-img" />
+              <img src="/Images/own/clock2.jpeg" alt="Execution and modular kitchen service" className="three-clock-img" />
               <div className="three-clock-overlay" />
               <div className="three-clock-content">
                 <h3 className="three-clock-title">Planning & Execution</h3>
@@ -378,7 +377,7 @@ function HomePage() {
             <div className="signature-grid">
               <article className="signature-card">
                 <div className="signature-media">
-                  <img src="/Images/services-1.jpg" alt="Interior designing" />
+                  <img src="/Images/own/services-1.jpeg" alt="Interior designing" />
                   <div className="signature-overlay" />
                   <div className="signature-chip">Interior Designing</div>
                 </div>
@@ -410,7 +409,7 @@ function HomePage() {
 
               <article className="signature-card">
                 <div className="signature-media">
-                  <img src="/Images/services-5.jpg" alt="Planning and execution" />
+                  <img src="/Images/own/services-5.jpeg" alt="Planning and execution" />
                   <div className="signature-overlay" />
                   <div className="signature-chip">Planning & Execution</div>
                 </div>
@@ -433,7 +432,7 @@ function HomePage() {
         <section className="grid-section" aria-label="Highlights grid">
           <div className="grid-wrap">
             <div className="grid-item grid-media">
-              <img className="grid-img" src="/Images/grid1.jpg" alt="Custom interior finishes" />
+              <img className="grid-img" src="/Images/own/grid1.jpeg" alt="Custom interior finishes" />
             </div>
 
             <div className="grid-item grid-text">
