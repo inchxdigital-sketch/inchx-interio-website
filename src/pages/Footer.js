@@ -8,9 +8,7 @@ import {
   FaYoutube,
   FaPhoneAlt,
   FaEnvelope,
-  FaMapMarkerAlt,
-  FaApple,
-  FaGooglePlay
+  FaMapMarkerAlt
 } from "react-icons/fa";
 import "./Footer.css";
 
@@ -30,6 +28,13 @@ function Footer() {
       [key]: !prev[key]
     }));
   };
+
+  const toSlug = (value) =>
+    value
+      .toLowerCase()
+      .replace(/&/g, "and")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
 
   const offerings = [
     {
@@ -129,15 +134,15 @@ function Footer() {
   ];
 
   const company = [
-    "How It Works",
-    "Policies",
-    "Terms and Conditions",
-    "About Us",
-    "Store Locator",
-    "Privacy",
-    "Own a Franchise",
-    "Interior Designer",
-    "Our Locations"
+    { label: "How It Works", link: "/how-it-works" },
+    { label: "Policies", link: "/policies" },
+    { label: "Terms and Conditions", link: "/terms" },
+    { label: "About Us", link: "/about" },
+    { label: "Store Locator", link: "/contact" },
+    { label: "Privacy", link: "/privacy" },
+    { label: "Own a Franchise", link: "/contact" },
+    { label: "Interior Designer", link: "/services" },
+    { label: "Our Locations", link: "/contact" }
   ];
 
   return (
@@ -154,21 +159,19 @@ function Footer() {
             </a>
 
             <div className="brand-social-final" aria-label="Social media links">
-              <a href="#" className="social-btn-final" aria-label="Facebook">
+              <a href="https://www.facebook.com/" className="social-btn-final" aria-label="Facebook" target="_blank" rel="noreferrer">
                 <FaFacebookF />
               </a>
-              <a href="#" className="social-btn-final" aria-label="Instagram">
+              <a href="https://www.instagram.com/inchx_interio/" className="social-btn-final" aria-label="Instagram" target="_blank" rel="noreferrer">
                 <FaInstagram />
               </a>
-              <a href="#" className="social-btn-final" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/" className="social-btn-final" aria-label="LinkedIn" target="_blank" rel="noreferrer">
                 <FaLinkedinIn />
               </a>
-              <a href="#" className="social-btn-final" aria-label="YouTube">
+              <a href="https://www.youtube.com/" className="social-btn-final" aria-label="YouTube" target="_blank" rel="noreferrer">
                 <FaYoutube />
               </a>
             </div>
-
-            
           </div>
 
           <div className="footer-col-final">
@@ -189,7 +192,7 @@ function Footer() {
 
                   <div className={`footer-drop-body-final ${openSections[section.key] ? "open" : ""}`}>
                     {section.items.map((item) => (
-                      <a href="#" className="footer-link-final" key={item}>
+                      <a href={`/services#${toSlug(item)}`} className="footer-link-final" key={item}>
                         {item}
                       </a>
                     ))}
@@ -217,7 +220,7 @@ function Footer() {
 
                   <div className={`footer-drop-body-final ${openSections[section.key] ? "open" : ""}`}>
                     {section.items.map((item) => (
-                      <a href="#" className="footer-link-final" key={item}>
+                      <a href={`/gallery#${toSlug(item)}`} className="footer-link-final" key={item}>
                         {item}
                       </a>
                     ))}
@@ -232,8 +235,8 @@ function Footer() {
 
             <div className="footer-simple-list-final">
               {company.map((item) => (
-                <a href="#" className="footer-link-final" key={item}>
-                  {item}
+                <a href={item.link} className="footer-link-final" key={item.label}>
+                  {item.label}
                 </a>
               ))}
             </div>
@@ -275,9 +278,9 @@ function Footer() {
           <p>© {new Date().getFullYear()} InchX Interio. All rights reserved.</p>
 
           <div className="footer-bottom-links-final">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Contact</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/contact">Contact</a>
           </div>
         </div>
       </div>
