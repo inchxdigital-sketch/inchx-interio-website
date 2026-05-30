@@ -28,7 +28,7 @@ function HomePage() {
           </div>
         </section>
 
-        <section className="services-sec" aria-label="Services we provide">
+        {/*<section className="services-sec" aria-label="Services we provide">
           <div className="services-inner">
             <div className="services-head">
               <h2 className="services-title">Services We Provide</h2>
@@ -130,7 +130,7 @@ function HomePage() {
               </article>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="hero" aria-label="Main banner">
           <img className="hero-img" src="/Images/main-banner3.jpg" alt="Kalki's Inchx Interio banner" />
@@ -265,7 +265,7 @@ function HomePage() {
           </div>
         </section>
 
-        <section className="visit-card" aria-label="Visiting card">
+        {/*<section className="visit-card" aria-label="Visiting card">
           <div className="visit-card-inner">
             <h2 className="visit-card-title"> Inchx Interio</h2>
 
@@ -325,7 +325,7 @@ function HomePage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="three-clock-section">
           <div className="three-clock-grid">

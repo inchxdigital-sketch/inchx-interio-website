@@ -1,312 +1,288 @@
-import React, { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import {
+  FaChevronDown,
+  FaChevronUp,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaApple,
+  FaGooglePlay
+} from "react-icons/fa";
 import "./Footer.css";
-import { FaInstagram, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
-const Footer = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+function Footer() {
+  const [openSections, setOpenSections] = useState({
+    interiors: false,
+    finishes: false,
+    furnishings: false,
+    designIdeas: false,
+    magazine: false,
+    tv: false
+  });
 
-  const toggleSection = (index) => setOpenIndex(openIndex === index ? null : index);
+  const toggleSection = (key) => {
+    setOpenSections((prev) => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
 
-  const quickLinks = useMemo(
-    () => [
-      { label: "Home", to: "/" },
-      { label: "Products", to: "/products" },
-      { label: "Services", to: "/services" },
-      { label: "About", to: "/about" },
-      { label: "Contact Us", to: "/contact" },
-    ],
-    []
-  );
+  const offerings = [
+    {
+      key: "interiors",
+      title: "Interiors",
+      items: [
+        "Modular Interiors",
+        "Full Home Interiors",
+        "Luxury Interiors",
+        "Livspace Kitchen",
+        "Livspace Wardrobe",
+        "Home Interior Price Calculator",
+        "Modular Kitchen Price",
+        "Wardrobe Price Calculator"
+      ]
+    },
+    {
+      key: "finishes",
+      title: "Finishes",
+      items: ["Handles", "Kitchen Cabinets", "Wardrobe Cabinets"]
+    },
+    {
+      key: "furnishings",
+      title: "Furnishings",
+      items: ["Curtains", "Blinds", "Wallpapers", "Bedsheets & Comforters"]
+    }
+  ];
 
-  const services = useMemo(
-    () => ["Interior Designing", "3D Designing", "Modular Kitchens", "Planning & Execution", "Facade Designing"],
-    []
-  );
+  const inspired = [
+    {
+      key: "designIdeas",
+      title: "Design Ideas",
+      items: [
+        "Kitchen Designs",
+        "Living Room Designs",
+        "Bedroom Designs",
+        "Kids Room Designs",
+        "Wardrobe Designs",
+        "Pooja Room Designs",
+        "Dining Room Designs",
+        "Foyer Room Designs",
+        "Bathroom Designs",
+        "Guest Bedroom Designs",
+        "Home Office Designs",
+        "Balcony Designs",
+        "TV Unit Designs",
+        "Modular Kitchen",
+        "False Ceiling Designs",
+        "Homes by Livspace",
+        "Window Designs",
+        "Flooring Designs",
+        "Wall Decor Designs",
+        "Wall Paint Designs",
+        "Home Wallpaper Designs",
+        "Tile Designs",
+        "Study Room Designs",
+        "Kitchen Sinks",
+        "Space Saving Designs"
+      ]
+    },
+    {
+      key: "magazine",
+      title: "Magazine",
+      items: [
+        "Room Ideas",
+        "Decor & Inspiration",
+        "Ceiling Design",
+        "Furniture Ideas",
+        "Home Decor",
+        "Lighting Ideas",
+        "Wall Design Ideas",
+        "Expert Advice",
+        "Interior Advice",
+        "Vastu Tips",
+        "Home Organisation",
+        "Materials Guide",
+        "Home Renovation Ideas"
+      ]
+    },
+    {
+      key: "tv",
+      title: "Livspace TV",
+      items: [
+        "1BHK",
+        "2BHK",
+        "3BHK",
+        "4BHK",
+        "Kitchen Designs",
+        "Bedroom Designs",
+        "Living Room Designs",
+        "Wardrobe Designs",
+        "Design Inspiration",
+        "Expert Advice",
+        "Vastu Tips"
+      ]
+    }
+  ];
 
-  const locations = useMemo(() => ["Andhra Pradesh", "Telangana", "Karnataka"], []);
-
-  const social = useMemo(
-    () => [{ label: "Instagram", href: "https://www.instagram.com/inchx_interio", icon: <FaInstagram /> }],
-    []
-  );
-
-  const address = "Andhra Pradesh, Telangana, Karnataka";
-
-  const mobileSections = useMemo(
-    () => [
-      { title: "Quick Links", type: "links", items: quickLinks },
-      { title: "Services", type: "text", items: services },
-      { title: "Locations", type: "locations", items: locations },
-      {
-        title: "Contact",
-        type: "contact",
-        items: [
-          { icon: <FaPhoneAlt />, label: "+91 9393141224", href: "tel:+919393141224" },
-          { icon: <FaEnvelope />, label: "kalkinadh.g@gmail.com", href: "mailto:kalkinadh.g@gmail.com" },
-          { icon: <FaEnvelope />, label: "inchxinterio@gmail.com", href: "mailto:inchxinterio@gmail.com" },
-          { icon: <FaMapMarkerAlt />, label: address, href: "https://maps.google.com/?q=Andhra%20Pradesh" },
-        ],
-      },
-    ],
-    [address, quickLinks, services, locations]
-  );
+  const company = [
+    "How It Works",
+    "Policies",
+    "Terms and Conditions",
+    "About Us",
+    "Store Locator",
+    "Privacy",
+    "Own a Franchise",
+    "Interior Designer",
+    "Our Locations"
+  ];
 
   return (
     <footer className="footer-final">
       <div className="footer-shell-final">
-        <div className="footer-desktop-final">
+        <div className="footer-grid-final">
           <div className="footer-col-final footer-brand-final">
-            <div className="brand-stack-final">
-              <img className="brand-logo3-final" src="/Images/logo31.jpeg" alt="Kalki's Inchx Interio" />
-              <div className="brand-text-final">
-                <h2 className="brand-title-final">KALKI&apos;S INCHX INTERIO</h2>
-                <p className="brand-subtitle-final">Excellence at your door step</p>
-              </div>
-            </div>
+            <a href="/" className="footer-brand-link-final" aria-label="InchX Interio Home">
+              <img className="brand-logo3-final" src="/Images/logo31.jpeg" alt="InchX Interio Logo" />
+              <span className="brand-text-wrap-final">
+                <span className="brand-title-final">InchX Interio</span>
+                <span className="brand-subtitle-final">Excellence at your door step</span>
+              </span>
+            </a>
 
-            <div className="brand-owner-final">
-              <div className="owner-badge-final">Managing Partner</div>
-              <div className="owner-name-final">KALKINADH ONENESS (KANNA)</div>
-            </div>
-
-            <div className="brand-contact-final">
-              <a className="footer-link-final" href="tel:+919393141224">
-                <FaPhoneAlt />
-                <span>+91 9393141224</span>
+            <div className="brand-social-final" aria-label="Social media links">
+              <a href="#" className="social-btn-final" aria-label="Facebook">
+                <FaFacebookF />
               </a>
-              <a className="footer-link-final" href="mailto:kalkinadh.g@gmail.com">
+              <a href="#" className="social-btn-final" aria-label="Instagram">
+                <FaInstagram />
+              </a>
+              <a href="#" className="social-btn-final" aria-label="LinkedIn">
+                <FaLinkedinIn />
+              </a>
+              <a href="#" className="social-btn-final" aria-label="YouTube">
+                <FaYoutube />
+              </a>
+            </div>
+
+            
+          </div>
+
+          <div className="footer-col-final">
+            <h3 className="footer-h-final">Offerings</h3>
+
+            <div className="footer-dropdown-stack-final">
+              {offerings.map((section) => (
+                <div className="footer-drop-final" key={section.key}>
+                  <button
+                    type="button"
+                    className="footer-drop-head-final"
+                    onClick={() => toggleSection(section.key)}
+                    aria-expanded={openSections[section.key]}
+                  >
+                    <span>{section.title}</span>
+                    {openSections[section.key] ? <FaChevronUp /> : <FaChevronDown />}
+                  </button>
+
+                  <div className={`footer-drop-body-final ${openSections[section.key] ? "open" : ""}`}>
+                    {section.items.map((item) => (
+                      <a href="#" className="footer-link-final" key={item}>
+                        {item}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="footer-col-final">
+            <h3 className="footer-h-final">Get Inspired</h3>
+
+            <div className="footer-dropdown-stack-final">
+              {inspired.map((section) => (
+                <div className="footer-drop-final" key={section.key}>
+                  <button
+                    type="button"
+                    className="footer-drop-head-final"
+                    onClick={() => toggleSection(section.key)}
+                    aria-expanded={openSections[section.key]}
+                  >
+                    <span>{section.title}</span>
+                    {openSections[section.key] ? <FaChevronUp /> : <FaChevronDown />}
+                  </button>
+
+                  <div className={`footer-drop-body-final ${openSections[section.key] ? "open" : ""}`}>
+                    {section.items.map((item) => (
+                      <a href="#" className="footer-link-final" key={item}>
+                        {item}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="footer-col-final">
+            <h3 className="footer-h-final">Company</h3>
+
+            <div className="footer-simple-list-final">
+              {company.map((item) => (
+                <a href="#" className="footer-link-final" key={item}>
+                  {item}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="footer-col-final">
+            <h3 className="footer-h-final">Contact Us</h3>
+
+            <div className="contact-stack-final">
+              <a href="tel:+919393141224" className="contact-link-final">
+                <FaPhoneAlt />
+                <span>+91 93931 41224</span>
+              </a>
+
+              <a href="mailto:kalkinadh.g@gmail.com" className="contact-link-final">
                 <FaEnvelope />
                 <span>kalkinadh.g@gmail.com</span>
               </a>
-              <a className="footer-link-final" href="mailto:inchxinterio@gmail.com">
+
+              <a href="mailto:inchxinterio@gmail.com" className="contact-link-final">
                 <FaEnvelope />
                 <span>inchxinterio@gmail.com</span>
               </a>
-              <a
-                className="footer-link-final"
-                href="https://maps.google.com/?q=Andhra%20Pradesh"
-                target="_blank"
-                rel="noreferrer"
-              >
+
+              <div className="contact-link-final contact-text-final">
                 <FaMapMarkerAlt />
-                <span>{address}</span>
-              </a>
+                <span>Andhra Pradesh, Telangana, Karnataka</span>
+              </div>
             </div>
 
-            <div className="brand-social-final">
-              {social.map((s) => (
-                <a
-                  key={s.label}
-                  className="social-btn-final"
-                  href={s.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={s.label}
-                >
-                  {s.icon}
-                </a>
-              ))}
+            <div className="contact-card-final">
+              <span className="contact-card-title-final">Interior Designing</span>
+              <span className="contact-card-text-final">Modular kitchens, 3D designing, planning and execution.</span>
             </div>
-          </div>
-
-          <div className="footer-col-final">
-            <h3 className="footer-h-final">Quick Links</h3>
-            <ul className="footer-list-final">
-              {quickLinks.map((l) => (
-                <li key={l.label}>
-                  <Link className="footer-btn-final" to={l.to}>
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="footer-col-final">
-            <h3 className="footer-h-final">Services</h3>
-            <ul className="footer-list-final">
-              {services.map((t) => (
-                <li key={t}>
-                  <span className="footer-text-final">{t}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="footer-col-final">
-            <h3 className="footer-h-final">Locations</h3>
-            <ul className="footer-list-final">
-              {locations.map((loc) => (
-                <li key={loc}>
-                  <span className="footer-text-final">{loc}</span>
-                </li>
-              ))}
-              <li>
-                <a
-                  className="footer-btn-final footer-more-final"
-                  href="https://maps.google.com/?q=Andhra%20Pradesh"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  View on Map
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="footer-col-final">
-            <h3 className="footer-h-final">What we do</h3>
-            <div className="footer-card-final">
-              <div className="card-line-final">
-                <span className="dot-final" />
-                <span>Complete home interiors with premium finishes</span>
-              </div>
-              <div className="card-line-final">
-                <span className="dot-final" />
-                <span>3D designs that match your taste and space</span>
-              </div>
-              <div className="card-line-final">
-                <span className="dot-final" />
-                <span>Planning to execution with on time delivery</span>
-              </div>
-              <div className="card-line-final">
-                <span className="dot-final" />
-                <span>Serving Andhra Pradesh, Telangana, Karnataka</span>
-              </div>
-              <div className="card-accent-final" />
-            </div>
-
-            <div className="footer-note-final">
-              <div className="note-pill-final">INCHX_INTERIO</div>
-              <div className="note-sub-final">Let’s design a space you’ll love to live in.</div>
-            </div>
-          </div>
-        </div>
-
-        <div className="footer-mobile-final">
-          <div className="brand-stack-final brand-stack-mobile-final">
-            <img className="brand-logo3-final" src="/Images/logo31.jpeg" alt="Kalki's Inchx Interio" />
-            <div className="brand-text-final">
-              <div className="brand-title-sm-final">KALKI&apos;S INCHX INTERIO</div>
-              <div className="brand-subtitle-sm-final">Excellence at your door step</div>
-            </div>
-          </div>
-
-          <div className="mobile-owner-final">
-            <div className="owner-badge-final">Managing Partner</div>
-            <div className="owner-name-final">KALKINADH ONENESS (KANNA)</div>
-          </div>
-
-          <div className="mobile-accordion-final">
-            {mobileSections.map((sec, idx) => (
-              <div className="acc-sec-final" key={sec.title}>
-                <button
-                  type="button"
-                  className="acc-head-final"
-                  onClick={() => toggleSection(idx)}
-                  aria-expanded={openIndex === idx}
-                >
-                  <span>{sec.title}</span>
-                  <span className="acc-icon-final">{openIndex === idx ? "−" : "+"}</span>
-                </button>
-
-                <div className={`acc-body-final ${openIndex === idx ? "open" : ""}`}>
-                  {sec.type === "links" && (
-                    <ul className="footer-list-final">
-                      {sec.items.map((l) => (
-                        <li key={l.label}>
-                          <Link className="footer-btn-final" to={l.to} onClick={() => setOpenIndex(null)}>
-                            {l.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-
-                  {sec.type === "text" && (
-                    <ul className="footer-list-final">
-                      {sec.items.map((t) => (
-                        <li key={t}>
-                          <span className="footer-text-final">{t}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-
-                  {sec.type === "locations" && (
-                    <ul className="footer-list-final">
-                      {sec.items.map((loc) => (
-                        <li key={loc}>
-                          <span className="footer-text-final">{loc}</span>
-                        </li>
-                      ))}
-                      <li>
-                        <a
-                          className="footer-btn-final footer-more-final"
-                          href="https://maps.google.com/?q=Andhra%20Pradesh"
-                          target="_blank"
-                          rel="noreferrer"
-                          onClick={() => setOpenIndex(null)}
-                        >
-                          View on Map
-                        </a>
-                      </li>
-                    </ul>
-                  )}
-
-                  {sec.type === "contact" && (
-                    <div className="contact-stack-final">
-                      {sec.items.map((c, i) => (
-                        <a
-                          key={i}
-                          className="footer-link-final"
-                          href={c.href}
-                          target={c.href.startsWith("http") ? "_blank" : undefined}
-                          rel="noreferrer"
-                        >
-                          {c.icon}
-                          <span>{c.label}</span>
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="brand-social-final mobile-social-final">
-            {social.map((s) => (
-              <a
-                key={s.label}
-                className="social-btn-final"
-                href={s.href}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={s.label}
-              >
-                {s.icon}
-              </a>
-            ))}
           </div>
         </div>
 
         <div className="footer-bottom-final">
-          <div className="footer-bottom-left-final">
-            <span className="mini-dot-final" />
-            <span>© {new Date().getFullYear()} KALKI&apos;S INCHX INTERIO</span>
-          </div>
+          <p>© {new Date().getFullYear()} InchX Interio. All rights reserved.</p>
 
-          <div className="footer-bottom-right-final">
-            <span className="tag-final tag-gold-final">Andhra Pradesh</span>
-            <span className="tag-final">Telangana</span>
-            <span className="tag-final">Karnataka</span>
+          <div className="footer-bottom-links-final">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact</a>
           </div>
         </div>
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

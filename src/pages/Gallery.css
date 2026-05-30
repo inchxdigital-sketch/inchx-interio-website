@@ -16,7 +16,6 @@
 
 .g-hero {
   position: relative;
-  padding: clamp(74px, 7vw, 96px) 18px;
 }
 
 .g-hero-bg {
@@ -1221,11 +1220,11 @@
 }
 
 .gfilm-row-a {
-  animation: gfilmLeft 30s linear infinite;
+  animation: gfilmLeft 120s linear infinite;
 }
 
 .gfilm-row-b {
-  animation: gfilmRight 34s linear infinite;
+  animation: gfilmRight 120s linear infinite;
   opacity: 0.95;
 }
 

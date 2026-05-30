@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Services.css";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 function Services() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
   const marqueeRow1 = [
     "living-1.jpeg",
     "living-2.jpeg",
@@ -26,41 +28,174 @@ function Services() {
     "bedroom-8.jpeg",
   ];
 
+  const heroSlides = [
+    {
+      image: "/Images/contact1.jpg",
+      title: "Services",
+      subtitle:
+        "Premium interior design, modular kitchens, 3D planning, and clean execution for beautiful spaces.",
+    },
+    {
+      image: "/Images/contact2.jpg",
+      title: "Design That Feels Personal",
+      subtitle:
+        "We understand your space, your lifestyle, and your taste before creating the right interior plan.",
+    },
+    {
+      image: "/Images/contact3.jpg",
+      title: "From Idea To Handover",
+      subtitle:
+        "A clear process with practical planning, rich finishes, and smooth site execution.",
+    },
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 3500);
+
+    return () => clearInterval(timer);
+  }, [heroSlides.length]);
+
+  const testimonialsServicesReviews = [
+  {
+    chip: "Finish",
+    text: "The finishing looks premium and clean. Lighting and ceiling work was done neatly.",
+    name: "Home Interior",
+  },
+  {
+    chip: "Planning",
+    text: "The 3D design helped us decide fast. Execution followed the plan without confusion.",
+    name: "Modular Kitchen",
+  },
+  {
+    chip: "On-Time",
+    text: "Work was completed on time, and the team kept the site clean. Very professional.",
+    name: "Full Home Project",
+  },
+  {
+    chip: "Design",
+    text: "They understood our taste clearly and gave a beautiful design that matched our home.",
+    name: "Living Room Interior",
+  },
+  {
+    chip: "Quality",
+    text: "Material quality and finishing were better than expected. The final look felt very rich.",
+    name: "Bedroom Interior",
+  },
+  {
+    chip: "Support",
+    text: "The team explained everything properly and guided us throughout the complete process.",
+    name: "Apartment Interior",
+  },
+  {
+    chip: "Execution",
+    text: "Site work was handled smoothly with proper coordination and clean finishing.",
+    name: "Villa Project",
+  },
+  {
+    chip: "Premium",
+    text: "The space now feels elegant, modern, and well planned. We are happy with the result.",
+    name: "Complete Interior",
+  },
+];
+
+const [activeFaqServices, setActiveFaqServices] = useState(null);
+
+const faqServicesItems = [
+  {
+    question: "Do you provide 3D design before work starts?",
+    answer: "Yes. We share 3D views and finalize the design before starting the execution work.",
+  },
+  {
+    question: "Which areas do you take projects in?",
+    answer: "We take projects in Andhra Pradesh, Telangana, Karnataka, Odisha, and selected locations across India.",
+  },
+  {
+    question: "How do I get a quote?",
+    answer: "You can call us or contact us through the enquiry page. A site visit helps us give a more accurate quote.",
+  },
+  {
+    question: "Do you handle modular kitchens?",
+    answer: "Yes. We handle modular kitchen design, storage planning, material selection, and installation.",
+  },
+  {
+    question: "Do you provide complete home interiors?",
+    answer: "Yes. We work on complete home interiors including living rooms, bedrooms, kitchens, ceilings, wardrobes, and decor.",
+  },
+  {
+    question: "Can you work based on my budget?",
+    answer: "Yes. We understand your budget first and suggest the best practical design and material options.",
+  },
+  {
+    question: "Do you help with material selection?",
+    answer: "Yes. We guide you with laminates, colors, finishes, lighting, hardware, and other interior materials.",
+  },
+  {
+    question: "How long does an interior project take?",
+    answer: "The timeline depends on the size and scope of work. After the site visit and design finalization, we share a clear schedule.",
+  },
+];
+
+
   return (
     <div>
       <Navbar />
 
       <div className="services-wrapper" id="services">
-        <section
-          className="services-hero"
-          style={{ backgroundImage: `url('/Images/main-banner3.jpg')` }}
-        >
-          <div className="services-hero-overlay">
-            <div className="services-hero-inner">
-              <div className="services-hero-kicker">KALKINADH ONENESS (KANNA)</div>
-              <h1 className="services-hero-title">INCHX INTERIO</h1>
-              <p className="services-hero-tagline">EXCELLENCE AT YOUR DOOR STEP</p>
+        <section className="contact8-hero-services" aria-label="Contact hero slideshow">
+          {heroSlides.map((slide, index) => (
+            <div
+              className={`contact8-hero-slide-services ${activeSlide === index ? "active-services" : ""
+                }`}
+              key={slide.image}
+            >
+              <img
+                className="contact8-hero-img-services"
+                src={slide.image}
+                alt={slide.title}
+              />
+            </div>
+          ))}
 
-              <div className="services-hero-actions">
-                <a className="btn btn-solid" href="/contact">
-                  Get Quote
-                </a>
-                <a className="btn btn-outline" href="tel:+919393141224">
-                  Call +91 9393141224
-                </a>
-              </div>
+          <div className="contact8-hero-overlay-services" />
 
-              <div className="services-hero-meta">
-                <a className="services-hero-link" href="mailto:inchxinterio@gmail.com">
-                  inchxinterio@gmail.com
-                </a>
-                <span className="services-hero-sep">|</span>
-                <a className="services-hero-link" href="mailto:kalkinadh.g@gmail.com">
-                  kalkinadh.g@gmail.com
-                </a>
-                <span className="services-hero-sep">|</span>
-                <span className="services-hero-handle">INCHX_INTERIO (Insta)</span>
-              </div>
+          <div className="contact8-hero-content-services">
+            <div className="contact8-hero-pill-services">KALKI&apos;S INCHX INTERIO</div>
+
+            <h1 className="contact8-hero-title-services">
+              {heroSlides[activeSlide].title}
+            </h1>
+
+            <p className="contact8-hero-sub-services">
+              {heroSlides[activeSlide].subtitle}
+            </p>
+
+            <div
+              className="contact8-hero-badges-services"
+              aria-label="Service regions"
+            >
+              <span className="contact8-badge-services">Andhra Pradesh</span>
+              <span className="contact8-badge-services">Telangana</span>
+              <span className="contact8-badge-services">Karnataka</span>
+              <span className="contact8-badge-services">Odisha</span>
+              <span className="contact8-badge-services">Expanding Across India</span>
+            </div>
+
+            <div
+              className="contact8-slide-dots-services"
+              aria-label="Hero slideshow controls"
+            >
+              {heroSlides.map((slide, index) => (
+                <button
+                  type="button"
+                  key={slide.image}
+                  className={`contact8-slide-dot-services ${activeSlide === index ? "active-services" : ""
+                    }`}
+                  aria-label={`Show slide ${index + 1}`}
+                  onClick={() => setActiveSlide(index)}
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -187,7 +322,7 @@ function Services() {
           </div>
         </section>
 
-        <section className="process" aria-label="Process">
+        {/*<section className="process" aria-label="Process">
           <div className="process-inner">
             <header className="section-head section-head-dark">
               <h2 className="section-title section-title-dark">How We Work</h2>
@@ -239,46 +374,53 @@ function Services() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="regions" aria-label="Regions we serve">
-          <div className="regions-inner">
-            <div className="regions-grid">
-              <div className="regions-left">
-                <h2 className="section-title">Regions We Serve</h2>
-                <div className="section-underline" />
-                <p className="section-sub">
-                  We take projects across South India with the same finish standard and execution discipline.
-                </p>
+  <div className="regions-inner">
+    <div className="regions-grid">
+      <div className="regions-left">
+        <h2 className="section-title">Regions We Serve</h2>
+        <div className="section-underline" />
+        <p className="section-sub">
+          We take projects across South India with the same finish standard and execution discipline.
+        </p>
 
-                <div className="regions-cards">
-                  <div className="regions-card">
-                    <div className="regions-card-title">Andhra Pradesh</div>
-                    <div className="regions-card-sub">Homes, apartments, and elevations.</div>
-                  </div>
-                  <div className="regions-card">
-                    <div className="regions-card-title">Telangana</div>
-                    <div className="regions-card-sub">Modern interiors and modular works.</div>
-                  </div>
-                  <div className="regions-card">
-                    <div className="regions-card-title">Karnataka</div>
-                    <div className="regions-card-sub">Planned execution with premium finish.</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="regions-right" aria-label="Regions visuals">
-                <div className="regions-visual">
-                  <img src="/Images/own/house1.jpeg" alt="Exterior showcase" />
-                  <div className="regions-float">
-                    <div className="regions-float-title">Book a Site Visit</div>
-                    <div className="regions-float-sub">Call +91 9393141224</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="regions-cards">
+          <div className="regions-card">
+            <div className="regions-card-title">Andhra Pradesh</div>
+            <div className="regions-card-sub">Homes, apartments, and elevations.</div>
           </div>
-        </section>
+
+          <div className="regions-card">
+            <div className="regions-card-title">Telangana</div>
+            <div className="regions-card-sub">Modern interiors and modular works.</div>
+          </div>
+
+          <div className="regions-card">
+            <div className="regions-card-title">Karnataka</div>
+            <div className="regions-card-sub">Planned execution with premium finish.</div>
+          </div>
+
+          <div className="regions-card">
+            <div className="regions-card-title">Odisha</div>
+            <div className="regions-card-sub">Elegant interior solutions with trusted execution.</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="regions-right" aria-label="Regions visuals">
+        <div className="regions-visual">
+          <img src="/Images/own/house1.jpeg" alt="Exterior showcase" />
+          <div className="regions-float">
+            <div className="regions-float-title">Book a Site Visit</div>
+            <div className="regions-float-sub">Call +91 9393141224</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
         <section className="featured" aria-label="Featured highlights">
           <div className="featured-inner">
@@ -329,9 +471,7 @@ function Services() {
             <header className="section-head section-head-dark">
               <h2 className="section-title section-title-dark">Services Gallery</h2>
               <div className="section-underline" />
-              <p className="section-sub section-sub-dark">
-                A smooth, modern animation that shows our style range without distracting the page.
-              </p>
+
             </header>
 
             <div className="marquee-wrap">
@@ -363,7 +503,7 @@ function Services() {
           </div>
         </section>
 
-        <section className="showcase" aria-label="Project showcase">
+        {/*<section className="showcase" aria-label="Project showcase">
           <div className="showcase-inner">
             <header className="section-head">
               <h2 className="section-title">Project Showcase</h2>
@@ -461,97 +601,92 @@ function Services() {
               </aside>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="testimonials" aria-label="Testimonials">
-          <div className="testimonials-inner">
-            <header className="section-head section-head-dark">
-              <h2 className="section-title section-title-dark">Client Words</h2>
-              <div className="section-underline" />
-              <p className="section-sub section-sub-dark">
-                Short feedback that reflects what we focus on, finish, clarity, and on-time execution.
-              </p>
-            </header>
+        <section className="testimonials-services" aria-label="Testimonials">
+  <div className="testimonials-inner-services">
+    <header className="section-head-services section-head-dark-services">
+      <h2 className="section-title-services1 section-title-dark-services">
+        Client Words
+      </h2>
+      <div className="section-underline-services1" />
+      <p className="section-sub-services1 section-sub-dark-services">
+        Short feedback that reflects what we focus on, finish, clarity, and on-time execution.
+      </p>
+    </header>
 
-            <div className="testimonials-grid">
-              <article className="tcard">
-                <div className="tcard-top">
-                  <div className="tchip">Finish</div>
-                  <div className="tstars">★★★★★</div>
-                </div>
-                <p className="ttext">
-                  The finishing looks premium and clean. Lighting and ceiling work was done neatly.
-                </p>
-                <div className="tname">Home Interior</div>
-              </article>
-
-              <article className="tcard">
-                <div className="tcard-top">
-                  <div className="tchip">Planning</div>
-                  <div className="tstars">★★★★★</div>
-                </div>
-                <p className="ttext">
-                  The 3D design helped us decide fast. Execution followed the plan without confusion.
-                </p>
-                <div className="tname">Modular Kitchen</div>
-              </article>
-
-              <article className="tcard">
-                <div className="tcard-top">
-                  <div className="tchip">On-Time</div>
-                  <div className="tstars">★★★★★</div>
-                </div>
-                <p className="ttext">
-                  Work was completed on time, and the team kept the site clean. Very professional.
-                </p>
-                <div className="tname">Full Home Project</div>
-              </article>
+    <div className="testimonials-marquee-services">
+      <div className="testimonials-track-services">
+        {[...testimonialsServicesReviews, ...testimonialsServicesReviews].map((review, index) => (
+          <article className="tcard-services" key={`${review.name}-${index}`}>
+            <div className="tcard-top-services">
+              <div className="tchip-services">{review.chip}</div>
+              <div className="tstars-services">★★★★★</div>
             </div>
+            <p className="ttext-services">{review.text}</p>
+            <div className="tname-services">{review.name}</div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section className="faq-services" aria-label="FAQ">
+  <div className="faq-inner-services">
+    <header className="section-head-services">
+      <div className="faq-kicker-services">FAQ</div>
+      <h2 className="section-title-services">Quick Answers</h2>
+      <div className="section-underline-services" />
+      <p className="section-sub-services">
+        A few common questions before you book a site visit.
+      </p>
+    </header>
+
+    <div className="faq-grid-services">
+      {faqServicesItems.map((item, index) => (
+        <div
+          className={`faq-item-services ${
+            activeFaqServices === index ? "active-services" : ""
+          }`}
+          key={item.question}
+        >
+          <button
+            type="button"
+            className="faq-question-btn-services"
+            onClick={() =>
+              setActiveFaqServices(activeFaqServices === index ? null : index)
+            }
+            aria-expanded={activeFaqServices === index}
+          >
+            <span className="faq-q-services">{item.question}</span>
+            <span className="faq-icon-services">
+              {activeFaqServices === index ? "−" : "+"}
+            </span>
+          </button>
+
+          <div className="faq-answer-wrap-services">
+            <div className="faq-a-services">{item.answer}</div>
           </div>
-        </section>
+        </div>
+      ))}
+    </div>
 
-        <section className="faq" aria-label="FAQ">
-          <div className="faq-inner">
-            <header className="section-head">
-              <h2 className="section-title">Quick Answers</h2>
-              <div className="section-underline" />
-              <p className="section-sub">A few common questions before you book a site visit.</p>
-            </header>
+    <div className="faq-cta-services">
+      <a className="btn-services btn-solid-services" href="/contact">
+        Enquire Now
+      </a>
+      <a
+        className="btn-services btn-outline-services"
+        href="mailto:inchxinterio@gmail.com"
+      >
+        Email Us
+      </a>
+    </div>
+  </div>
+</section>
 
-            <div className="faq-grid">
-              <div className="faq-item">
-                <div className="faq-q">Do you provide 3D design before work starts?</div>
-                <div className="faq-a">Yes. We share 3D views and finalize the design, then we begin execution.</div>
-              </div>
-
-              <div className="faq-item">
-                <div className="faq-q">Which areas do you take projects in?</div>
-                <div className="faq-a">Andhra Pradesh, Telangana, and Karnataka.</div>
-              </div>
-
-              <div className="faq-item">
-                <div className="faq-q">How do I get a quote?</div>
-                <div className="faq-a">Call us or use the contact page. A site visit helps us quote accurately.</div>
-              </div>
-
-              <div className="faq-item">
-                <div className="faq-q">Do you handle modular kitchens?</div>
-                <div className="faq-a">Yes. We handle modular kitchen design, storage planning, and installation.</div>
-              </div>
-            </div>
-
-            <div className="faq-cta">
-              <a className="btn btn-solid" href="/contact">
-                Enquire Now
-              </a>
-              <a className="btn btn-outline" href="mailto:inchxinterio@gmail.com">
-                Email Us
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section className="cta" aria-label="Final call to action">
+        {/*<section className="cta" aria-label="Final call to action">
           <div className="cta-inner">
             <div className="cta-panel">
               <div className="cta-left">
@@ -575,7 +710,7 @@ function Services() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <Footer />
       </div>

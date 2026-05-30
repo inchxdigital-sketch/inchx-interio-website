@@ -375,7 +375,7 @@ function Gallery() {
                 </div>
             </section>
 
-            <section className="gmasonry" aria-label="Masonry gallery">
+            {/*<section className="gmasonry" aria-label="Masonry gallery">
                 <div className="gmasonry-inner">
                     <header className="gmasonry-head">
                         <h2 className="gmasonry-title">Masonry Showcase</h2>
@@ -402,7 +402,7 @@ function Gallery() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section className="gba" aria-label="Before and after">
                 <div className="gba-inner">
@@ -516,7 +516,7 @@ function Gallery() {
                 </div>
             </section>
 
-            <section className="gspot" aria-label="Spotlight carousel">
+            {/*<section className="gspot" aria-label="Spotlight carousel">
                 <div className="gspot-inner">
                     <header className="gspot-head">
                         <h2 className="gspot-title">Spotlight Carousel</h2>
@@ -572,7 +572,7 @@ function Gallery() {
                         </a>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <Footer />
         </div>

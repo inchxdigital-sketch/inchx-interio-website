@@ -19,7 +19,7 @@
 .contact8-h2 {
   margin: 0;
   font-weight: 700;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   font-size: clamp(1.4rem, 3vw, 2.05rem);
   color: var(--wine);
@@ -63,10 +63,6 @@
   margin-bottom: 18px;
 }
 
-.contact8-head-invert .contact8-underline {
-  background: var(--gold);
-}
-
 .contact8-btn {
   text-decoration: none;
   display: inline-flex;
@@ -87,7 +83,7 @@
 
 .contact8-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.1);
 }
 
 .contact8-btn-solid {
@@ -111,10 +107,23 @@
 .contact8-hero {
   position: relative;
   width: 100%;
-  height: 72vh;
-  min-height: 520px;
+  height: 74vh;
+  min-height: 540px;
   overflow: hidden;
   background: var(--black);
+}
+
+.contact8-hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 900ms ease, transform 2200ms ease;
+}
+
+.contact8-hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .contact8-hero-img {
@@ -122,14 +131,14 @@
   height: 100%;
   display: block;
   object-fit: cover;
-  transform: scale(1.03);
 }
 
 .contact8-hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(900px 420px at 50% 40%, rgba(240, 201, 48, 0.18), transparent 60%),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.80));
+  background:
+    radial-gradient(900px 420px at 50% 40%, rgba(240, 201, 48, 0.2), transparent 60%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.86));
 }
 
 .contact8-hero-content {
@@ -149,7 +158,7 @@
   padding: 10px 14px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(0, 0, 0, 0.22);
+  background: rgba(0, 0, 0, 0.24);
   color: rgba(255, 255, 255, 0.92);
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -164,7 +173,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  font-size: clamp(2.25rem, 5.8vw, 4.8rem);
   color: var(--white);
   line-height: 1.03;
   text-shadow: 0 18px 55px rgba(0, 0, 0, 0.45);
@@ -198,6 +207,30 @@
   -webkit-backdrop-filter: blur(10px);
 }
 
+.contact8-slide-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.contact8-slide-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  padding: 0;
+  transition: width 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.contact8-slide-dot.active {
+  width: 34px;
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
 .contact8-s1 {
   padding: 78px 0;
   background: var(--white);
@@ -206,16 +239,16 @@
 .contact8-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 14px;
 }
 
 .contact8-card {
   border-radius: 20px;
-  border: 1px solid rgba(11, 11, 11, 0.10);
-  padding: 16px 14px;
+  border: 1px solid rgba(11, 11, 11, 0.1);
+  padding: 18px 16px;
   text-decoration: none;
   color: inherit;
-  background: linear-gradient(180deg, rgba(25, 38, 46, 0.03), rgba(11, 11, 11, 0.01));
+  background: linear-gradient(180deg, rgba(25, 38, 46, 0.035), rgba(11, 11, 11, 0.01));
   box-shadow: 0 18px 55px rgba(0, 0, 0, 0.06);
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
@@ -223,13 +256,13 @@
 .contact8-card:hover {
   transform: translateY(-2px);
   border-color: rgba(240, 201, 48, 0.35);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.1);
 }
 
 .contact8-card-kicker {
   color: rgba(11, 11, 11, 0.62);
   font-weight: 700;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   font-size: 11px;
 }
@@ -244,9 +277,256 @@
 
 .contact8-card-sub {
   margin-top: 10px;
-  color: rgba(11, 11, 11, 0.70);
+  color: rgba(11, 11, 11, 0.7);
   font-weight: 600;
   line-height: 1.6;
+}
+
+.contact8-s9 {
+  background: var(--black);
+  padding: 82px 0;
+}
+
+.contact8-s9 * {
+  box-sizing: border-box;
+}
+
+.contact8-coverage-grid {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.contact8-coverage-left {
+  display: grid;
+  gap: 18px;
+}
+
+.contact8-map-visual {
+  min-width: 0;
+}
+
+.contact8-map-card {
+  position: relative;
+  min-height: 380px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    radial-gradient(420px 230px at 44% 42%, rgba(240, 201, 48, 0.16), transparent 62%),
+    linear-gradient(180deg, rgba(25, 38, 46, 0.85), rgba(11, 11, 11, 0.76));
+  padding: 22px;
+}
+
+.contact8-map-title {
+  color: var(--white);
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contact8-map-sub {
+  margin-top: 10px;
+  max-width: 420px;
+  color: rgba(255, 255, 255, 0.76);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.contact8-india-shape {
+  position: absolute;
+  right: 32px;
+  bottom: 34px;
+  width: min(300px, 72%);
+  height: 260px;
+  border-radius: 46% 44% 38% 50%;
+  background:
+    radial-gradient(circle at 64% 48%, rgba(240, 201, 48, 0.42), transparent 12%),
+    radial-gradient(circle at 52% 62%, rgba(240, 201, 48, 0.38), transparent 11%),
+    radial-gradient(circle at 47% 76%, rgba(240, 201, 48, 0.36), transparent 11%),
+    radial-gradient(circle at 72% 44%, rgba(240, 201, 48, 0.36), transparent 11%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(240, 201, 48, 0.08));
+  border: 1px solid rgba(240, 201, 48, 0.26);
+  box-shadow: inset 0 0 60px rgba(255, 255, 255, 0.06), 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.contact8-pin {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: var(--black);
+  background: var(--gold);
+  border: 2px solid rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(240, 201, 48, 0.3);
+}
+
+.contact8-pin-ap {
+  left: 55%;
+  top: 57%;
+}
+
+.contact8-pin-tg {
+  left: 46%;
+  top: 48%;
+}
+
+.contact8-pin-ka {
+  left: 36%;
+  top: 68%;
+}
+
+.contact8-pin-od {
+  left: 66%;
+  top: 38%;
+}
+
+.contact8-pin-in {
+  left: 42%;
+  top: 18%;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(240, 201, 48, 0.55);
+}
+
+.contact8-map-legend {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  display: grid;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.contact8-map-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.contact8-active-dot,
+.contact8-plan-dot {
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  border-radius: 999px;
+}
+
+.contact8-active-dot {
+  background: var(--gold);
+  box-shadow: 0 0 0 4px rgba(240, 201, 48, 0.14);
+}
+
+.contact8-plan-dot {
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08);
+}
+
+.contact8-mapwrap {
+  position: relative;
+  min-width: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  min-height: 330px;
+}
+
+.contact8-mapwrap iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.contact8-maplink {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.contact8-maplink:hover {
+  transform: translateY(-1px);
+  background: rgba(0, 0, 0, 0.85);
+  border-color: rgba(240, 201, 48, 0.4);
+}
+
+.contact8-coverage-right {
+  display: grid;
+  gap: 12px;
+}
+
+.contact8-zone-card {
+  border-radius: 20px;
+  padding: 16px;
+  border: 1px solid rgba(240, 201, 48, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.contact8-zone-card.plan {
+  border-color: rgba(255, 255, 255, 0.14);
+  background:
+    radial-gradient(420px 140px at 0% 0%, rgba(240, 201, 48, 0.13), transparent 62%),
+    rgba(255, 255, 255, 0.045);
+}
+
+.contact8-zone-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.contact8-zone-state {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.contact8-zone-status {
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--black);
+  background: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact8-zone-card.plan .contact8-zone-status {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(240, 201, 48, 0.32);
+}
+
+.contact8-zone-card p {
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 600;
+  line-height: 1.65;
 }
 
 .contact8-s2 {
@@ -344,7 +624,7 @@
 
 .contact8-s3-card {
   border-radius: 20px;
-  border: 1px solid rgba(11, 11, 11, 0.10);
+  border: 1px solid rgba(11, 11, 11, 0.1);
   padding: 18px 16px;
   background: rgba(11, 11, 11, 0.01);
 }
@@ -357,15 +637,15 @@
 
 .contact8-info-row {
   border-radius: 16px;
-  border: 1px solid rgba(11, 11, 11, 0.10);
-  padding: 12px 12px;
+  border: 1px solid rgba(11, 11, 11, 0.1);
+  padding: 12px;
   background: rgba(255, 255, 255, 0.9);
 }
 
 .contact8-info-label {
   color: rgba(11, 11, 11, 0.62);
   font-weight: 700;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   font-size: 11px;
 }
@@ -375,12 +655,13 @@
   font-weight: 600;
   color: rgba(11, 11, 11, 0.86);
   line-height: 1.6;
+  word-break: break-word;
 }
 
 .contact8-s3-media {
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(11, 11, 11, 0.10);
+  border: 1px solid rgba(11, 11, 11, 0.1);
   min-height: 320px;
 }
 
@@ -443,7 +724,8 @@
 .contact8-final {
   border-radius: 22px;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  background: radial-gradient(700px 260px at 10% 20%, rgba(240, 201, 48, 0.18), transparent 60%),
+  background:
+    radial-gradient(700px 260px at 10% 20%, rgba(240, 201, 48, 0.18), transparent 60%),
     rgba(255, 255, 255, 0.06);
   padding: 18px 16px;
   display: grid;
@@ -475,218 +757,12 @@
   justify-content: flex-end;
 }
 
-.contact8-s9 {
-  background: var(--black);
-  padding: 82px 0;
-}
-
-.contact8-s9 * {
-  box-sizing: border-box;
-}
-
-.contact8-formmap {
-  margin-top: 26px;
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  gap: 22px;
-  align-items: stretch;
-}
-
-.contact8-formwrap {
-  position: relative;
-  min-width: 0;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 20px;
-  padding: 22px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  overflow: hidden;
-}
-
-.contact8-form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  min-width: 0;
-}
-
-.contact8-form-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 14px;
-  min-width: 0;
-}
-
-.contact8-field {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-width: 0;
-}
-
-.contact8-label {
-  display: block;
-  font-size: 13px;
-  letter-spacing: 0.2px;
-  color: rgba(255, 255, 255, 0.86);
-  font-weight: 600;
-}
-
-.contact8-input,
-.contact8-textarea {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(0, 0, 0, 0.55);
-  color: var(--white);
-  padding: 12px 12px;
-  font-size: 14px;
-  line-height: 1.2;
-  outline: none;
-  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
-}
-
-.contact8-textarea {
-  resize: vertical;
-  min-height: 130px;
-  line-height: 1.55;
-}
-
-.contact8-input::placeholder,
-.contact8-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.45);
-}
-
-.contact8-input:focus,
-.contact8-textarea:focus {
-  border-color: rgba(240, 201, 48, 0.55);
-  background: rgba(0, 0, 0, 0.70);
-}
-
-.contact8-submit {
-  margin-top: 6px;
-  border: 0;
-  cursor: pointer;
-  border-radius: 14px;
-  padding: 12px 14px;
-  font-size: 14px;
-  font-weight: 700;
-  background: var(--gold);
-  color: var(--black);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  transition: transform 160ms ease, opacity 160ms ease, background 160ms ease;
-}
-
-.contact8-submit:hover {
-  transform: translateY(-1px);
-}
-
-.contact8-submit:disabled {
-  cursor: not-allowed;
-  opacity: 0.65;
-}
-
-.contact8-mapwrap {
-  position: relative;
-  min-width: 0;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.06);
-  min-height: 420px;
-}
-
-.contact8-mapwrap iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.contact8-maplink {
-  position: absolute;
-  left: 14px;
-  bottom: 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 12px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  color: var(--white);
-  font-size: 13px;
-  text-decoration: none;
-  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
-}
-
-.contact8-maplink:hover {
-  transform: translateY(-1px);
-  background: rgba(0, 0, 0, 0.85);
-  border-color: rgba(240, 201, 48, 0.40);
-}
-
-.contact8-popup {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  padding: 16px;
-}
-
-.contact8-popup-inner {
-  width: min(520px, 100%);
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  padding: 18px 16px;
-  text-align: center;
-  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.35);
-}
-
-.contact8-popup-title {
-  margin: 0;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--white);
-}
-
-.contact8-popup-text {
-  margin: 10px 0 0;
-  color: rgba(255, 255, 255, 0.82);
-  font-weight: 600;
-  line-height: 1.6;
-}
-
-.contact8-popup-btn {
-  margin-top: 14px;
-  border: 0;
-  cursor: pointer;
-  border-radius: 999px;
-  padding: 10px 14px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: var(--gold);
-  color: var(--black);
-}
-
 @media (max-width: 980px) {
   .contact8-cards {
     grid-template-columns: 1fr;
   }
 
+  .contact8-coverage-grid,
   .contact8-s2-grid,
   .contact8-s3-grid {
     grid-template-columns: 1fr;
@@ -704,18 +780,22 @@
     justify-content: flex-start;
   }
 
-  .contact8-formmap {
-    grid-template-columns: 1fr;
-  }
-
   .contact8-mapwrap {
     min-height: 340px;
+  }
+
+  .contact8-map-card {
+    min-height: 360px;
   }
 }
 
 @media (max-width: 560px) {
   .contact8-container {
     padding: 0 16px;
+  }
+
+  .contact8-hero {
+    min-height: 560px;
   }
 
   .contact8-btn {
@@ -727,26 +807,43 @@
     display: grid;
   }
 
-  .contact8-formwrap {
-    padding: 16px;
-    border-radius: 16px;
+  .contact8-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .contact8-s2-tiles {
+    grid-template-columns: 1fr;
+  }
+
+  .contact8-map-card {
+    min-height: 430px;
+    padding: 18px;
+  }
+
+  .contact8-india-shape {
+    right: 18px;
+    bottom: 72px;
+    width: 250px;
+    height: 230px;
+  }
+
+  .contact8-map-legend {
+    left: 18px;
+    bottom: 18px;
   }
 
   .contact8-mapwrap {
     border-radius: 16px;
     min-height: 320px;
   }
+}
 
-  .contact8-form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .contact8-input,
-  .contact8-textarea {
-    border-radius: 12px;
-  }
-
-  .contact8-submit {
-    border-radius: 12px;
+@media (prefers-reduced-motion: reduce) {
+  .contact8-hero-slide,
+  .contact8-slide-dot,
+  .contact8-btn,
+  .contact8-card,
+  .contact8-maplink {
+    transition: none;
   }
 }

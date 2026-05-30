@@ -1,86 +1,115 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Contact.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const formRef = useRef(null);
-  const [loading, setLoading] = useState(false);
-  const [popupVisible, setPopupVisible] = useState(false);
-  const [phone, setPhone] = useState("");
+  const [activeSlide, setActiveSlide] = useState(0);
 
-  const mapLink = "https://maps.google.com/?q=Andhra%20Pradesh";
-  const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent("Andhra Pradesh")}&output=embed`;
+  const mapLink = "https://maps.google.com/?q=Andhra%20Pradesh%20Telangana%20Karnataka%20Odisha%20India";
+  const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(
+    "Andhra Pradesh Telangana Karnataka Odisha India"
+  )}&output=embed`;
+
+  const heroSlides = [
+    {
+      image: "/Images/contact1.jpg",
+      title: "Contact",
+      subtitle: "Premium interior design, modular kitchens, 3D planning, and clean execution for beautiful spaces."
+    },
+    {
+      image: "/Images/contact-main-hero-2.jpg",
+      title: "Design That Feels Personal",
+      subtitle: "We understand your space, your lifestyle, and your taste before creating the right interior plan."
+    },
+    {
+      image: "/Images/contact-main-hero-3.jpg",
+      title: "From Idea To Handover",
+      subtitle: "A clear process with practical planning, rich finishes, and smooth site execution."
+    }
+  ];
 
   const services = [
     "Interior Designing",
     "3D Designing",
     "Modular Kitchens",
     "Planning & Execution",
-    "Facade Designing",
+    "Facade Designing"
   ];
 
-  const handlePhoneChange = (e) => {
-    const onlyDigits = e.target.value.replace(/\D/g, "").slice(0, 10);
-    setPhone(onlyDigits);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (phone.length !== 10) {
-      alert("Please enter a valid 10 digit mobile number.");
-      return;
+  const coverage = [
+    {
+      state: "Andhra Pradesh",
+      status: "Active Service",
+      text: "Design consultation, site planning, modular work, and execution support."
+    },
+    {
+      state: "Telangana",
+      status: "Active Service",
+      text: "Home interiors, modular kitchens, wardrobes, and finishing guidance."
+    },
+    {
+      state: "Karnataka",
+      status: "Active Service",
+      text: "Premium interior solutions with practical layouts and quality execution."
+    },
+    {
+      state: "Odisha",
+      status: "Active Service",
+      text: "Interior consultation and project planning for homes and commercial spaces."
+    },
+    {
+      state: "All Over India",
+      status: "Expansion Plan",
+      text: "We are planning to expand our services across India with the same design quality."
     }
+  ];
 
-    const now = new Date();
-    const submittedAt = now.toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 4500);
 
-    const timeInput = formRef.current?.querySelector('input[name="time"]');
-    const sourceInput = formRef.current?.querySelector('input[name="source"]');
-    const submittedAtInput = formRef.current?.querySelector('input[name="submitted_at"]');
-
-    if (timeInput) timeInput.value = submittedAt;
-    if (sourceInput) sourceInput.value = "Contact Page";
-    if (submittedAtInput) submittedAtInput.value = submittedAt;
-
-    setLoading(true);
-
-    emailjs
-      .sendForm("service_xj6kp6o", "template_gvzo194", formRef.current, "A3f67NO9h5O9f35Ls")
-      .then(
-        () => {
-          setLoading(false);
-          setPopupVisible(true);
-          setPhone("");
-          formRef.current?.reset();
-        },
-        () => {
-          setLoading(false);
-          alert("Failed to send. Please try again.");
-        }
-      );
-  };
+    return () => clearInterval(timer);
+  }, [heroSlides.length]);
 
   return (
     <div>
       <Navbar />
 
       <main className="contact8" id="contact">
-        <section className="contact8-hero" aria-label="Contact hero">
-          <img className="contact8-hero-img" src="/Images/contact1.jpg" alt="Contact Kalki's INCHX INTERIO" />
+        <section className="contact8-hero" aria-label="Contact hero slideshow">
+          {heroSlides.map((slide, index) => (
+            <div className={`contact8-hero-slide ${activeSlide === index ? "active" : ""}`} key={slide.image}>
+              <img className="contact8-hero-img" src={slide.image} alt={slide.title} />
+            </div>
+          ))}
+
           <div className="contact8-hero-overlay" />
+
           <div className="contact8-hero-content">
             <div className="contact8-hero-pill">KALKI&apos;S INCHX INTERIO</div>
-            <h1 className="contact8-hero-title">Contact</h1>
-            <p className="contact8-hero-sub">
-              Excellence at your door step. Share your requirement, we will guide you clearly from design to finishing.
-            </p>
+            <h1 className="contact8-hero-title">{heroSlides[activeSlide].title}</h1>
+            <p className="contact8-hero-sub">{heroSlides[activeSlide].subtitle}</p>
+
             <div className="contact8-hero-badges" aria-label="Service regions">
               <span className="contact8-badge">Andhra Pradesh</span>
               <span className="contact8-badge">Telangana</span>
               <span className="contact8-badge">Karnataka</span>
+              <span className="contact8-badge">Odisha</span>
+              <span className="contact8-badge">Expanding Across India</span>
+            </div>
+
+            <div className="contact8-slide-dots" aria-label="Hero slideshow controls">
+              {heroSlides.map((slide, index) => (
+                <button
+                  type="button"
+                  key={slide.image}
+                  className={`contact8-slide-dot ${activeSlide === index ? "active" : ""}`}
+                  aria-label={`Show slide ${index + 1}`}
+                  onClick={() => setActiveSlide(index)}
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -90,7 +119,7 @@ export default function Contact() {
             <div className="contact8-head">
               <h2 className="contact8-h2">Quick Contact</h2>
               <div className="contact8-underline" />
-              <p className="contact8-p">Call, email, or message us. We respond fast and keep it simple.</p>
+              <p className="contact8-p">Reach us for site visits, quotations, design discussions, or complete project planning.</p>
             </div>
 
             <div className="contact8-cards">
@@ -121,104 +150,47 @@ export default function Contact() {
           </div>
         </section>
 
-        <section className="contact8-s9" aria-label="Send message and map">
+        <section className="contact8-s9" aria-label="Service coverage map">
           <div className="contact8-container">
             <div className="contact8-head contact8-head-invert">
-              <h2 className="contact8-h2 contact8-h2-invert">Send a Message</h2>
+              <h2 className="contact8-h2 contact8-h2-invert">Where We Serve</h2>
               <div className="contact8-underline contact8-underline-invert" />
-              <p className="contact8-p contact8-p-invert">Tell us what you need. We will contact you quickly.</p>
+              <p className="contact8-p contact8-p-invert">
+                We currently serve Andhra Pradesh, Telangana, Karnataka, and Odisha. We are also planning to expand our interior services across India.
+              </p>
             </div>
 
-            <div className="contact8-formmap">
-              <div className="contact8-formwrap">
-                <form ref={formRef} onSubmit={handleSubmit} className="contact8-form">
-                  <input type="hidden" name="time" />
-                  <input type="hidden" name="source" />
-                  <input type="hidden" name="submitted_at" />
+            <div className="contact8-coverage-grid">
+              <div className="contact8-coverage-left">
+                
 
-                  <div className="contact8-form-row">
-                    <div className="contact8-field">
-                      <label className="contact8-label">Name</label>
-                      <input className="contact8-input" name="name" type="text" placeholder="Enter your name" required />
-                    </div>
-                    <div className="contact8-field">
-                      <label className="contact8-label">Phone</label>
-                      <input
-                        className="contact8-input"
-                        name="phone"
-                        type="tel"
-                        value={phone}
-                        onChange={handlePhoneChange}
-                        placeholder="Enter 10 digit mobile number"
-                        maxLength={10}
-                        pattern="[0-9]{10}"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="contact8-form-row">
-                    <div className="contact8-field">
-                      <label className="contact8-label">Email</label>
-                      <input className="contact8-input" name="email" type="email" placeholder="Enter your email" required />
-                    </div>
-                    <div className="contact8-field">
-                      <label className="contact8-label">Subject</label>
-                      <input className="contact8-input" name="title" type="text" placeholder="Eg: Modular kitchen design" required />
-                    </div>
-                  </div>
-
-                  <div className="contact8-field">
-                    <label className="contact8-label">Service</label>
-                    <select className="contact8-input" name="category" defaultValue="" required>
-                      <option value="" disabled>
-                        Select a service
-                      </option>
-                      {services.map((s) => (
-                        <option key={s} value={s}>
-                          {s}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div className="contact8-field">
-                    <label className="contact8-label">Message</label>
-                    <textarea className="contact8-textarea" name="message" rows="5" placeholder="Tell us your requirement" required />
-                  </div>
-
-                  <button type="submit" className="contact8-submit" disabled={loading}>
-                    {loading ? "Sending..." : "Submit"}
-                  </button>
-                </form>
-
-                {popupVisible && (
-                  <div className="contact8-popup">
-                    <div className="contact8-popup-inner">
-                      <h3 className="contact8-popup-title">Submitted Successfully</h3>
-                      <p className="contact8-popup-text">Thank you. We will contact you soon.</p>
-                      <button className="contact8-popup-btn" onClick={() => setPopupVisible(false)}>
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                )}
+                <div className="contact8-mapwrap" aria-label="Google map">
+                  <iframe
+                    title="Service Locations"
+                    src={mapEmbedSrc}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
+                  <a className="contact8-maplink" href={mapLink} target="_blank" rel="noreferrer">
+                    Open in Google Maps
+                  </a>
+                </div>
               </div>
 
-              <div className="contact8-mapwrap" aria-label="Google map">
-                <iframe
-                  title="Service Locations"
-                  src={mapEmbedSrc}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  allowFullScreen
-                />
-                <a className="contact8-maplink" href={mapLink} target="_blank" rel="noreferrer">
-                  Open in Google Maps
-                </a>
+              <div className="contact8-coverage-right">
+                {coverage.map((item) => (
+                  <div className={`contact8-zone-card ${item.status === "Expansion Plan" ? "plan" : ""}`} key={item.state}>
+                    <div className="contact8-zone-top">
+                      <span className="contact8-zone-state">{item.state}</span>
+                      <span className="contact8-zone-status">{item.status}</span>
+                    </div>
+                    <p>{item.text}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -231,15 +203,15 @@ export default function Contact() {
                 <h2 className="contact8-h2 contact8-h2-invert">What We Do</h2>
                 <div className="contact8-underline contact8-underline-invert" />
                 <p className="contact8-p contact8-p-invert">
-                  Interior work that looks premium and stays practical. Clear planning, neat execution, and finishing that feels rich.
+                  We create interiors that look premium, feel comfortable, and work practically for everyday living.
                 </p>
 
                 <div className="contact8-tags">
-                  <span className="contact8-tag">Interior Designing</span>
-                  <span className="contact8-tag">3D Designing</span>
-                  <span className="contact8-tag">Modular Kitchens</span>
-                  <span className="contact8-tag">Planning & Execution</span>
-                  <span className="contact8-tag">Facade Designing</span>
+                  {services.map((service) => (
+                    <span className="contact8-tag" key={service}>
+                      {service}
+                    </span>
+                  ))}
                 </div>
 
                 <div className="contact8-s2-actions">
@@ -255,20 +227,20 @@ export default function Contact() {
               <div className="contact8-s2-right">
                 <div className="contact8-s2-tiles">
                   <div className="contact8-tile">
-                    <div className="contact8-tile-top">Clean Execution</div>
-                    <div className="contact8-tile-sub">Neat edges and tidy site handling</div>
+                    <div className="contact8-tile-top">Design Clarity</div>
+                    <div className="contact8-tile-sub">Layouts, materials, colors, and finish plans made easy to understand.</div>
                   </div>
                   <div className="contact8-tile">
                     <div className="contact8-tile-top">Premium Finish</div>
-                    <div className="contact8-tile-sub">Materials and details that last</div>
+                    <div className="contact8-tile-sub">Rich detailing with clean edges, balanced textures, and practical materials.</div>
                   </div>
                   <div className="contact8-tile">
-                    <div className="contact8-tile-top">Clear Updates</div>
-                    <div className="contact8-tile-sub">Timely progress and next steps</div>
+                    <div className="contact8-tile-top">Site Planning</div>
+                    <div className="contact8-tile-sub">Clear execution flow with measurements, timelines, and regular updates.</div>
                   </div>
                   <div className="contact8-tile">
-                    <div className="contact8-tile-top">Custom Design</div>
-                    <div className="contact8-tile-sub">Made to match your taste and space</div>
+                    <div className="contact8-tile-top">Custom Work</div>
+                    <div className="contact8-tile-sub">Solutions made for your space, taste, storage needs, and lifestyle.</div>
                   </div>
                 </div>
 
@@ -287,7 +259,7 @@ export default function Contact() {
                 <h2 className="contact8-h2">Business Details</h2>
                 <div className="contact8-underline" />
                 <p className="contact8-p">
-                  Led by <span className="contact8-strong">Kalkinadh Oneness (Kanna)</span>. Reach us anytime for a quick quote or consultation.
+                  Led by <span className="contact8-strong">Kalkinadh Oneness (Kanna)</span>. Reach us for interiors, modular kitchens, 3D designs, and project execution.
                 </p>
 
                 <div className="contact8-info">
@@ -310,7 +282,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="contact8-s3-media" aria-label="Office photo">
+              <div className="contact8-s3-media" aria-label="Interior planning photo">
                 <img src="/Images/contact2.jpg" alt="Interior planning and execution" />
               </div>
             </div>
@@ -329,38 +301,40 @@ export default function Contact() {
               <div className="contact8-step">
                 <div className="contact8-step-no">01</div>
                 <div className="contact8-step-title">Discuss</div>
-                <div className="contact8-step-sub">Needs, style, and budget.</div>
+                <div className="contact8-step-sub">We understand your space, taste, needs, and budget.</div>
               </div>
               <div className="contact8-step">
                 <div className="contact8-step-no">02</div>
                 <div className="contact8-step-title">Design</div>
-                <div className="contact8-step-sub">Layout and 3D design when needed.</div>
+                <div className="contact8-step-sub">We plan the layout, look, materials, and 3D design when needed.</div>
               </div>
               <div className="contact8-step">
                 <div className="contact8-step-no">03</div>
                 <div className="contact8-step-title">Estimate</div>
-                <div className="contact8-step-sub">Clear cost options and guidance.</div>
+                <div className="contact8-step-sub">You get clear cost options before starting the work.</div>
               </div>
               <div className="contact8-step">
                 <div className="contact8-step-no">04</div>
                 <div className="contact8-step-title">Execute</div>
-                <div className="contact8-step-sub">Neat work and regular updates.</div>
+                <div className="contact8-step-sub">Our team handles the site work with neat execution.</div>
               </div>
               <div className="contact8-step">
                 <div className="contact8-step-no">05</div>
                 <div className="contact8-step-title">Handover</div>
-                <div className="contact8-step-sub">Final checks and finishing.</div>
+                <div className="contact8-step-sub">Final checks, finishing, and handover after completion.</div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="contact8-s8" aria-label="Final CTA">
+        <section className="contact8-s8" aria-label="Final call to action">
           <div className="contact8-container">
             <div className="contact8-final">
               <div className="contact8-final-left">
                 <h2 className="contact8-final-title">Let’s Start Your Project</h2>
-                <p className="contact8-final-sub">Call now for quick guidance and the next steps.</p>
+                <p className="contact8-final-sub">
+                  Call us for interiors, modular kitchen designs, 3D planning, or complete execution support.
+                </p>
               </div>
               <div className="contact8-final-right">
                 <a className="contact8-btn contact8-btn-solid" href="tel:+919393141224">
