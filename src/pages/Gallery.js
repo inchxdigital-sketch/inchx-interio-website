@@ -84,38 +84,47 @@ function Gallery() {
     []
   );
 
-  const getCategoryFromUrl = () => {
+  const selectedCategoryKey = useMemo(() => {
     const params = new URLSearchParams(location.search);
     const selectedCategory = params.get("category");
     const isValidCategory = categories.some((category) => category.key === selectedCategory);
-    return isValidCategory ? selectedCategory : categories[0].key;
-  };
 
-  const [activeKey, setActiveKey] = useState(getCategoryFromUrl);
+    return isValidCategory ? selectedCategory : categories[0].key;
+  }, [location.search, categories]);
+
+  const [activeKey, setActiveKey] = useState(selectedCategoryKey);
   const [phase, setPhase] = useState("in");
+  const [baValue, setBaValue] = useState([60, 60, 60]);
+
   const tabTimerRef = useRef(null);
   const galleryTabsRef = useRef(null);
 
-  const activeIndex = categories.findIndex((c) => c.key === activeKey);
+  const activeIndex = categories.findIndex((category) => category.key === activeKey);
   const active = categories[activeIndex] || categories[0];
 
   useEffect(() => {
-    const urlCategory = getCategoryFromUrl();
+    let scrollTimer;
 
-    if (urlCategory !== activeKey) {
-      setActiveKey(urlCategory);
+    if (selectedCategoryKey !== activeKey) {
+      setActiveKey(selectedCategoryKey);
       setPhase("in");
     }
 
     if (location.search.includes("category=")) {
-      window.setTimeout(() => {
+      scrollTimer = window.setTimeout(() => {
         galleryTabsRef.current?.scrollIntoView({
           behavior: "smooth",
           block: "start"
         });
       }, 300);
     }
-  }, [location.search, categories]);
+
+    return () => {
+      if (scrollTimer) {
+        window.clearTimeout(scrollTimer);
+      }
+    };
+  }, [selectedCategoryKey, activeKey, location.search]);
 
   useEffect(() => {
     return () => {
@@ -165,8 +174,6 @@ function Gallery() {
     []
   );
 
-  const [baValue, setBaValue] = useState([60, 60, 60]);
-
   const setOneBA = (idx, v) => {
     setBaValue((prev) => {
       const next = [...prev];
@@ -199,11 +206,14 @@ function Gallery() {
     []
   );
 
-  const galleryHeroSlides = [
-    "/Images/gallery-hero-1.jpg",
-    "/Images/gallery-hero-2.jpg",
-    "/Images/gallery-hero-3.jpg"
-  ];
+  const galleryHeroSlides = useMemo(
+    () => [
+      "/Images/gallery-hero-1.jpg",
+      "/Images/gallery-hero-2.jpg",
+      "/Images/gallery-hero-3.jpg"
+    ],
+    []
+  );
 
   return (
     <div className="gallery-page">
@@ -213,7 +223,7 @@ function Gallery() {
         <div className="g-hero-bg-update" aria-hidden="true">
           {galleryHeroSlides.map((image, index) => (
             <img
-              key={index}
+              key={image}
               className="g-hero-slide-update"
               src={image}
               alt=""
@@ -269,16 +279,16 @@ function Gallery() {
           </header>
 
           <div className="gtabs-bar" role="tablist" aria-label="Gallery category tabs">
-            {categories.map((c) => (
+            {categories.map((category) => (
               <button
-                key={c.key}
+                key={category.key}
                 type="button"
-                className={`gtab ${c.key === activeKey ? "active" : ""}`}
-                onClick={() => handleTab(c.key)}
+                className={`gtab ${category.key === activeKey ? "active" : ""}`}
+                onClick={() => handleTab(category.key)}
                 role="tab"
-                aria-selected={c.key === activeKey}
+                aria-selected={category.key === activeKey}
               >
-                <span className="gtab-label">{c.label}</span>
+                <span className="gtab-label">{category.label}</span>
               </button>
             ))}
 
