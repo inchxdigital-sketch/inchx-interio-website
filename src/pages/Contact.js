@@ -78,41 +78,44 @@ export default function Contact() {
       <Navbar />
 
       <main className="contact8" id="contact">
-        <section className="contact8-hero" aria-label="Contact hero slideshow">
-          {heroSlides.map((slide, index) => (
-            <div className={`contact8-hero-slide ${activeSlide === index ? "active" : ""}`} key={slide.image}>
-              <img className="contact8-hero-img" src={slide.image} alt={slide.title} />
-            </div>
-          ))}
+        <section className="contact8-hero-update" aria-label="Contact hero slideshow">
+  {heroSlides.map((slide, index) => (
+    <div
+      className={`contact8-hero-slide-update ${activeSlide === index ? "active-update" : ""}`}
+      key={slide.image}
+    >
+      <img className="contact8-hero-img-update" src={slide.image} alt={slide.title} />
+    </div>
+  ))}
 
-          <div className="contact8-hero-overlay" />
+  <div className="contact8-hero-overlay-update" />
 
-          <div className="contact8-hero-content">
-            <div className="contact8-hero-pill">KALKI&apos;S INCHX INTERIO</div>
-            <h1 className="contact8-hero-title">{heroSlides[activeSlide].title}</h1>
-            <p className="contact8-hero-sub">{heroSlides[activeSlide].subtitle}</p>
+  <div className="contact8-hero-content-update">
+    <h1 className="contact8-hero-title-update">{heroSlides[activeSlide].title}</h1>
 
-            <div className="contact8-hero-badges" aria-label="Service regions">
-              <span className="contact8-badge">Andhra Pradesh</span>
-              <span className="contact8-badge">Telangana</span>
-              <span className="contact8-badge">Karnataka</span>
-              <span className="contact8-badge">Odisha</span>
-              <span className="contact8-badge">Expanding Across India</span>
-            </div>
+    <p className="contact8-hero-sub-update">{heroSlides[activeSlide].subtitle}</p>
 
-            <div className="contact8-slide-dots" aria-label="Hero slideshow controls">
-              {heroSlides.map((slide, index) => (
-                <button
-                  type="button"
-                  key={slide.image}
-                  className={`contact8-slide-dot ${activeSlide === index ? "active" : ""}`}
-                  aria-label={`Show slide ${index + 1}`}
-                  onClick={() => setActiveSlide(index)}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
+    <div className="contact8-hero-badges-update" aria-label="Service regions">
+      <span className="contact8-badge-update">Andhra Pradesh</span>
+      <span className="contact8-badge-update">Telangana</span>
+      <span className="contact8-badge-update">Karnataka</span>
+      <span className="contact8-badge-update">Odisha</span>
+      <span className="contact8-badge-update">Expanding Across India</span>
+    </div>
+
+    <div className="contact8-slide-dots-update" aria-label="Hero slideshow controls">
+      {heroSlides.map((slide, index) => (
+        <button
+          type="button"
+          key={slide.image}
+          className={`contact8-slide-dot-update ${activeSlide === index ? "active-update" : ""}`}
+          aria-label={`Show slide ${index + 1}`}
+          onClick={() => setActiveSlide(index)}
+        />
+      ))}
+    </div>
+  </div>
+</section>
 
         <section className="contact8-s1" aria-label="Quick contact">
           <div className="contact8-container">
@@ -252,7 +255,8 @@ export default function Contact() {
           </div>
         </section>
 
-        <section className="contact8-s3" aria-label="Business details">
+        
+        {/*<section className="contact8-s3" aria-label="Business details">
           <div className="contact8-container">
             <div className="contact8-s3-grid">
               <div className="contact8-s3-card">
@@ -287,7 +291,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="contact8-s4" aria-label="Project flow">
           <div className="contact8-container">

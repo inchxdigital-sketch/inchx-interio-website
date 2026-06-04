@@ -151,7 +151,7 @@ function Footer() {
         <div className="footer-grid-final">
           <div className="footer-col-final footer-brand-final">
             <a href="/" className="footer-brand-link-final" aria-label="InchX Interio Home">
-              <img className="brand-logo3-final" src="/Images/logo31.jpeg" alt="InchX Interio Logo" />
+              <img className="brand-logo3-final" src="/Images/main-logo-update.png" alt="InchX Interio Logo" />
               <span className="brand-text-wrap-final">
                 <span className="brand-title-final">InchX Interio</span>
                 <span className="brand-subtitle-final">Excellence at your door step</span>
@@ -263,7 +263,7 @@ function Footer() {
 
               <div className="contact-link-final contact-text-final">
                 <FaMapMarkerAlt />
-                <span>Andhra Pradesh, Telangana, Karnataka</span>
+                <span>Andhra Pradesh, Telangana, Karnataka, Odisha and Expanding to all over India</span>
               </div>
             </div>
 

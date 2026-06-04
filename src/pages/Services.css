@@ -1431,7 +1431,7 @@ img {
   z-index: 3;
   width: min(1180px, 92%);
   color: #ffffff;
-  padding: 120px 0 80px;
+  padding: 200px 0 0px;
 }
 
 .contact8-hero-pill-services {
@@ -1454,7 +1454,7 @@ img {
 .contact8-hero-title-services {
   max-width: 780px;
   margin: 0;
-  font-size: clamp(42px, 7vw, 86px);
+  font-size: clamp(22px, 3vw, 46px);
   line-height: 1.02;
   font-weight: 800;
   letter-spacing: -2px;
@@ -1633,7 +1633,14 @@ img {
 
 
 
+.marquee-wrap:hover .marquee-row,
+.marquee-wrap.marquee-paused .marquee-row {
+  animation-play-state: paused;
+}
 
+.marquee-wrap {
+  cursor: pointer;
+}
 
 
 

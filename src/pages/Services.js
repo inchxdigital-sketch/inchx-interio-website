@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 
 function Services() {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [isMarqueePaused, setIsMarqueePaused] = useState(false);
 
   const marqueeRow1 = [
     "living-1.jpeg",
@@ -161,7 +162,6 @@ const faqServicesItems = [
           <div className="contact8-hero-overlay-services" />
 
           <div className="contact8-hero-content-services">
-            <div className="contact8-hero-pill-services">KALKI&apos;S INCHX INTERIO</div>
 
             <h1 className="contact8-hero-title-services">
               {heroSlides[activeSlide].title}
@@ -296,28 +296,7 @@ const faqServicesItems = [
                 </p>
               </article>
 
-              <article className="svcgrid-card svcgrid-card-wide">
-                <div className="svcgrid-wide">
-                  <div className="svcgrid-wide-left">
-                    <div className="svcgrid-wide-badge">Need a quick call?</div>
-                    <h3 className="svcgrid-title">Let’s plan your space</h3>
-                    <p className="svcgrid-text">
-                      Share your requirement, we will guide you with layout, finish options, and a clear quote.
-                    </p>
-                    <div className="svcgrid-wide-actions">
-                      <a className="btn btn-solid" href="/contact">
-                        Enquire Now
-                      </a>
-                      <a className="btn btn-outline" href="tel:+919393141224">
-                        Call Now
-                      </a>
-                    </div>
-                  </div>
-                  <div className="svcgrid-wide-right">
-                    <img src="/Images/right3.jpg" alt="Modern interior details" />
-                  </div>
-                </div>
-              </article>
+              
             </div>
           </div>
         </section>
@@ -467,41 +446,43 @@ const faqServicesItems = [
         </section>
 
         <section className="marquee" aria-label="Animated gallery">
-          <div className="marquee-inner">
-            <header className="section-head section-head-dark">
-              <h2 className="section-title section-title-dark">Services Gallery</h2>
-              <div className="section-underline" />
+  <div className="marquee-inner">
+    <header className="section-head section-head-dark">
+      <h2 className="section-title section-title-dark">Services Gallery</h2>
+      <div className="section-underline" />
+    </header>
 
-            </header>
-
-            <div className="marquee-wrap">
-              <div className="marquee-row marquee-row-a" aria-hidden="true">
-                {[...marqueeRow1, ...marqueeRow1].map((img, idx) => (
-                  <div className="marquee-card" key={`a-${idx}`}>
-                    <img src={`/Images/own/${img}`} alt="" />
-                  </div>
-                ))}
-              </div>
-
-              <div className="marquee-row marquee-row-b" aria-hidden="true">
-                {[...marqueeRow2, ...marqueeRow2].map((img, idx) => (
-                  <div className="marquee-card" key={`b-${idx}`}>
-                    <img src={`/Images/own/${img}`} alt="" />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="marquee-cta">
-              <a className="btn btn-solid" href="/contact">
-                Get a Design Plan
-              </a>
-              <a className="btn btn-outline" href="tel:+919393141224">
-                Talk to Us
-              </a>
-            </div>
+    <div
+      className={`marquee-wrap ${isMarqueePaused ? "marquee-paused" : ""}`}
+      onClick={() => setIsMarqueePaused((prev) => !prev)}
+    >
+      <div className="marquee-row marquee-row-a" aria-hidden="true">
+        {[...marqueeRow1, ...marqueeRow1].map((img, idx) => (
+          <div className="marquee-card" key={`a-${idx}`}>
+            <img src={`/Images/own/${img}`} alt="" />
           </div>
-        </section>
+        ))}
+      </div>
+
+      <div className="marquee-row marquee-row-b" aria-hidden="true">
+        {[...marqueeRow2, ...marqueeRow2].map((img, idx) => (
+          <div className="marquee-card" key={`b-${idx}`}>
+            <img src={`/Images/own/${img}`} alt="" />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div className="marquee-cta">
+      <a className="btn btn-solid" href="/contact">
+        Get a Design Plan
+      </a>
+      <a className="btn btn-outline" href="tel:+919393141224">
+        Talk to Us
+      </a>
+    </div>
+  </div>
+</section>
 
         {/*<section className="showcase" aria-label="Project showcase">
           <div className="showcase-inner">

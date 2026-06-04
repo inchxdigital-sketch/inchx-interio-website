@@ -51,9 +51,9 @@ function Navbar() {
   const links = useMemo(
     () => [
       { name: "Home", path: "/" },
-      { name: "Gallery", path: "/gallery" },
       { name: "Services", path: "/services" },
       { name: "About", path: "/about" },
+      { name: "Gallery", path: "/gallery" },
       { name: "Contact Us", path: "/contact" }
     ],
     []
@@ -64,9 +64,9 @@ function Navbar() {
       <nav className={`navbar ${hidden ? "navbar-hidden" : ""}`} role="navigation" aria-label="Main">
         <div className="nav-inner">
           <Link to="/" className="brand" onClick={handleLinkClick} aria-label="InchX Interio Home">
-            <img className="brand-logo1" src="/Images/logo31.jpeg" alt="InchX Interio Logo" />
+            <img className="brand-logo1" src="/Images/main-logo-update.png" alt="InchX Interio Logo" />
             <span className="brand-copy">
-              <span className="brand-name">InchX Interio</span>
+              <span className="brand-name">Inch X Interio</span>
               <span className="brand-tagline">Excellence at your door step</span>
             </span>
           </Link>
