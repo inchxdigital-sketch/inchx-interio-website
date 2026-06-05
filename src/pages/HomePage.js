@@ -9,55 +9,54 @@ import { FaHome, FaBuilding, FaRegBuilding } from "react-icons/fa";
 
 function HomePage() {
   const heroSlides = [
-  "/Images/homepage-hero-1.jpg",
-  "/Images/homepage-hero-2.jpg",
-  "/Images/homepage-hero-3.jpg",
-  "/Images/homepage-hero-4.jpg",
-  "/Images/homepage-hero-5.jpg",
-  "/Images/homepage-hero-6.jpg",
-  "/Images/homepage-hero-7.jpg",
-];
+    "/Images/homepage-hero-1.jpg",
+    "/Images/homepage-hero-8.jpg",
+    "/Images/homepage-hero-4.jpg",
+    "/Images/homepage-hero-10.jpg",
+    "/Images/homepage-hero-6.jpg",
+    "/Images/homepage-hero-9.jpg",
+    "/Images/homepage-hero-3.jpg",
+  ];
 
-const splitLeftSlides = [
-  "/Images/left-1.jpg",
-  "/Images/left-2.jpg",
-  "/Images/own/featured.jpeg"
-];
+  const splitLeftSlides = [
+    "/Images/left-1.jpg",
+    "/Images/left-2.jpg",
+    "/Images/own/featured.jpeg"
+  ];
 
-const chooseSlidesUpdate = [
-  "/Images/why-choose4.jpg",
-  "/Images/why-choose5.jpg",
-  "/Images/why-choose6.jpg"
-];
+  const chooseSlidesUpdate = [
+    "/Images/why-choose4.jpg",
+    "/Images/why-choose5.jpg",
+    "/Images/why-choose6.jpg"
+  ];
 
   return (
     <>
       <Navbar />
       <main className="home">
         <section className="hero-section-update">
-  <div className="slideshow-container-update">
-    {heroSlides.map((image, index) => (
-      <img
-        key={index}
-        src={image}
-        alt={`Homepage Hero ${index + 1}`}
-        className="slide-image-update"
-        style={{ animationDelay: `${index * 4}s` }}
-      />
-    ))}
+          <div className="slideshow-container-update">
+            {heroSlides.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Homepage Hero ${index + 1}`}
+                className="slide-image-update"
+                style={{ animationDelay: `${index * 4}s` }}
+              />
+            ))}
 
-    <div className="hero-gradient-update">
-      <div className="text-container-update">
-        <h1 className="crafted-text-update">Crafted By You</h1>
-        <h1 className="built-text-update">Built By Us</h1>
-        <h4 className="description-title-update">Excellence at your door step</h4>
-        <p className="description-text-update">
-          From cozy corners to grand entrances, personalize every room to match your lifestyle.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+            <div className="hero-gradient-update">
+              <div className="text-container-update">
+                <h1 className="crafted-text-update">We design it, build it we deliver it</h1>
+                <h1 className="built-text-update">ready to live in</h1><br />
+                <p className="description-text-update">
+                  From cozy corners to grand entrances, personalize every room to match your lifestyle.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/*<section className="services-sec" aria-label="Services we provide">
           <div className="services-inner">
@@ -186,77 +185,77 @@ const chooseSlidesUpdate = [
           </div>
         </section> */}
 
-       <section className="split-banner-section" aria-label="Explore categories">
-  <div className="split-banner-inner">
-    <div className="split-head">
-      <h2 className="split-title">Explore Our Interior Collections</h2>
-      <div className="split-underline" />
-      <p className="split-sub">
-        Materials and finishes curated for modern homes, premium looks, and clean detailing.
-      </p>
-    </div>
+        <section className="split-banner-section" aria-label="Explore categories">
+          <div className="split-banner-inner">
+            <div className="split-head">
+              <h2 className="split-title">Explore Our Interior Collections</h2>
+              <div className="split-underline" />
+              <p className="split-sub">
+                Materials and finishes curated for modern homes, premium looks, and clean detailing.
+              </p>
+            </div>
 
-    <div className="split-body">
-      <Link to="/gallery?category=living" className="split-left">
-        <div className="split-left-slideshow">
-          {splitLeftSlides.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Featured interior collection ${index + 1}`}
-              className="split-left-slide"
-              style={{ animationDelay: `${index * 3.5}s` }}
-            />
-          ))}
-        </div>
-      </Link>
+            <div className="split-body">
+              <Link to="/gallery?category=living" className="split-left">
+                <div className="split-left-slideshow">
+                  {splitLeftSlides.map((image, index) => (
+                    <img
+                      key={index}
+                      src={image}
+                      alt={`Featured interior collection ${index + 1}`}
+                      className="split-left-slide"
+                      style={{ animationDelay: `${index * 3.5}s` }}
+                    />
+                  ))}
+                </div>
+              </Link>
 
-      <div className="split-right">
-        <Link to="/gallery?category=living" className="split-right-card">
-          <div className="split-right-media">
-            <img src="/Images/own/right.jpeg" alt="Luxury living room" />
+              <div className="split-right">
+                <Link to="/gallery?category=living" className="split-right-card">
+                  <div className="split-right-media">
+                    <img src="/Images/own/right.jpeg" alt="Luxury living room" />
+                  </div>
+                  <p className="split-right-text">Luxury Living Room</p>
+                </Link>
+
+                <Link to="/gallery?category=kitchen" className="split-right-card">
+                  <div className="split-right-media">
+                    <img src="/Images/own/right1.jpeg" alt="Modular kitchen" />
+                  </div>
+                  <p className="split-right-text">Modular Kitchen</p>
+                </Link>
+
+                <Link to="/gallery?category=facade" className="split-right-card">
+                  <div className="split-right-media">
+                    <img src="/Images/gallery/facade-1.jpg" alt="Facade design" />
+                  </div>
+                  <p className="split-right-text">Facade Design</p>
+                </Link>
+
+                <Link to="/gallery?category=bedroom" className="split-right-card">
+                  <div className="split-right-media">
+                    <img src="/Images/own/right3.jpeg" alt="Bedroom design" />
+                  </div>
+                  <p className="split-right-text">Bed Room Design</p>
+                </Link>
+
+                <Link to="/gallery?category=ceiling" className="split-right-card">
+                  <div className="split-right-media">
+                    <img src="/Images/right4.jpg" alt="Ceiling design" />
+                  </div>
+                  <p className="split-right-text">Ceiling Design</p>
+                </Link>
+
+                <Link to="/gallery?category=ceiling" className="split-right-card">
+                  <div className="split-right-media">
+                    <img src="/Images/right5.jpg" alt="Lighting design" />
+                  </div>
+                  <p className="split-right-text">Lighting Design</p>
+                </Link>
+              </div>
+            </div>
           </div>
-          <p className="split-right-text">Luxury Living Room</p>
-        </Link>
-
-        <Link to="/gallery?category=kitchen" className="split-right-card">
-          <div className="split-right-media">
-            <img src="/Images/own/right1.jpeg" alt="Modular kitchen" />
-          </div>
-          <p className="split-right-text">Modular Kitchen</p>
-        </Link>
-
-        <Link to="/gallery?category=facade" className="split-right-card">
-          <div className="split-right-media">
-            <img src="/Images/own/right2.jpeg" alt="Facade design" />
-          </div>
-          <p className="split-right-text">Facade Design</p>
-        </Link>
-
-        <Link to="/gallery?category=bedroom" className="split-right-card">
-          <div className="split-right-media">
-            <img src="/Images/own/right3.jpeg" alt="Bedroom design" />
-          </div>
-          <p className="split-right-text">Bed Room Design</p>
-        </Link>
-
-        <Link to="/gallery?category=ceiling" className="split-right-card">
-          <div className="split-right-media">
-            <img src="/Images/right4.jpg" alt="Ceiling design" />
-          </div>
-          <p className="split-right-text">Ceiling Design</p>
-        </Link>
-
-        <Link to="/gallery?category=ceiling" className="split-right-card">
-          <div className="split-right-media">
-            <img src="/Images/right5.jpg" alt="Lighting design" />
-          </div>
-          <p className="split-right-text">Lighting Design</p>
-        </Link>
-      </div>
-    </div>
-  </div>
-</section>
+        </section>
 
         {/*<section className="home-part-grid" aria-label="Highlights">
           <div className="home-part-inner">
@@ -526,153 +525,153 @@ const chooseSlidesUpdate = [
         </section>
 
         <section className="choose-update" aria-label="Why choose Inchx Interio">
-  <div className="choose-inner-update">
-    <div className="choose-grid-update">
-      <div className="choose-content-update">
-        <div className="choose-badge-update">Why Choose Us</div>
+          <div className="choose-inner-update">
+            <div className="choose-grid-update">
+              <div className="choose-content-update">
+                <div className="choose-badge-update">Why Choose Us</div>
 
-        <h2 className="choose-title-update">
-          Premium finish, practical design, on-time delivery.
-        </h2>
+                <h2 className="choose-title-update">
+                  Designed Beautifully. Delivered Perfectly.
+                </h2>
 
-        <div className="choose-underline-update" />
+                <div className="choose-underline-update" />
 
-        <p className="choose-desc-update">
-          Interiors should look premium and feel comfortable every day. We plan smart,
-          execute clean, and finish with detail. Clean workmanship, trusted materials,
-          and clear updates from the first design to the final handover.
-        </p>
+                <p className="choose-desc-update">
+                  Interiors should look premium and feel comfortable every day. We plan smart,
+                  execute clean, and finish with detail. Clean workmanship, trusted materials,
+                  and clear updates from the first design to the final handover.
+                </p>
 
-        <ul className="choose-points-update">
-          <li className="choose-point-update">
-            <span className="choose-bullet-update" />
-            <span className="choose-point-text-update">Space planning that improves flow and usability</span>
-          </li>
-          <li className="choose-point-update">
-            <span className="choose-bullet-update" />
-            <span className="choose-point-text-update">3D designs so you can visualize before we build</span>
-          </li>
-          <li className="choose-point-update">
-            <span className="choose-bullet-update" />
-            <span className="choose-point-text-update">Premium materials with clean, skilled workmanship</span>
-          </li>
-          <li className="choose-point-update">
-            <span className="choose-bullet-update" />
-            <span className="choose-point-text-update">Neat finishing with attention to edges and alignment</span>
-          </li>
-          <li className="choose-point-update">
-            <span className="choose-bullet-update" />
-            <span className="choose-point-text-update">On time delivery with smooth coordination</span>
-          </li>
-        </ul>
-      </div>
+                <ul className="choose-points-update">
+                  <li className="choose-point-update">
+                    <span className="choose-bullet-update" />
+                    <span className="choose-point-text-update">Space planning that improves flow and usability</span>
+                  </li>
+                  <li className="choose-point-update">
+                    <span className="choose-bullet-update" />
+                    <span className="choose-point-text-update">3D designs so you can visualize before we build</span>
+                  </li>
+                  <li className="choose-point-update">
+                    <span className="choose-bullet-update" />
+                    <span className="choose-point-text-update">Premium materials with clean, skilled workmanship</span>
+                  </li>
+                  <li className="choose-point-update">
+                    <span className="choose-bullet-update" />
+                    <span className="choose-point-text-update">Neat finishing with attention to edges and alignment</span>
+                  </li>
+                  <li className="choose-point-update">
+                    <span className="choose-bullet-update" />
+                    <span className="choose-point-text-update">On time delivery with smooth coordination</span>
+                  </li>
+                </ul>
+              </div>
 
-      <div className="choose-visual-update">
-        <div className="choose-slideshow-update">
-          {chooseSlidesUpdate.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Why choose Inchx Interio ${index + 1}`}
-              className="choose-slide-update"
-              style={{ animationDelay: `${index * 4}s` }}
-            />
-          ))}
+              <div className="choose-visual-update">
+                <div className="choose-slideshow-update">
+                  {chooseSlidesUpdate.map((image, index) => (
+                    <img
+                      key={index}
+                      src={image}
+                      alt={`Why choose Inchx Interio ${index + 1}`}
+                      className="choose-slide-update"
+                      style={{ animationDelay: `${index * 4}s` }}
+                    />
+                  ))}
 
-          <div className="choose-slide-overlay-update">
-            <div className="choose-tag-update">Trusted Execution</div>
+                  <div className="choose-slide-overlay-update">
+                    <div className="choose-tag-update">Trusted Execution</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="promise-grid-update">
+              <article className="promise-card-update">
+                <div className="promise-card-top-update">
+                  <div className="promise-mark-update">
+                    <span className="promise-mark-dot-update" />
+                  </div>
+                  <h3 className="promise-card-title-update">Design Support</h3>
+                </div>
+
+                <p className="promise-card-text-update">
+                  Practical design decisions that look premium and work perfectly for everyday living.
+                </p>
+
+                <div className="promise-list-update">
+                  <div className="promise-item-update">
+                    <span className="promise-bullet-update" />
+                    <span className="promise-item-text-update">Space planning and layout</span>
+                  </div>
+                  <div className="promise-item-update">
+                    <span className="promise-bullet-update" />
+                    <span className="promise-item-text-update">Color and material matching</span>
+                  </div>
+                  <div className="promise-item-update">
+                    <span className="promise-bullet-update" />
+                    <span className="promise-item-text-update">Lighting and finishing ideas</span>
+                  </div>
+                </div>
+              </article>
+
+              <article className="promise-card-update promise-card-featured-update">
+                <div className="promise-card-top-update">
+                  <div className="promise-mark-update">
+                    <span className="promise-mark-dot-update" />
+                  </div>
+                  <h3 className="promise-card-title-update">Quality First</h3>
+                </div>
+
+                <p className="promise-card-text-update">
+                  Strong materials and neat execution, so your interiors stay beautiful and last longer.
+                </p>
+
+                <div className="promise-metrics-update">
+                  <div className="promise-metric-update">
+                    <div className="promise-metric-value-update">A+</div>
+                    <div className="promise-metric-label-update">Finish</div>
+                  </div>
+                  <div className="promise-metric-update">
+                    <div className="promise-metric-value-update">0</div>
+                    <div className="promise-metric-label-update">Shortcuts</div>
+                  </div>
+                  <div className="promise-metric-update">
+                    <div className="promise-metric-value-update">100%</div>
+                    <div className="promise-metric-label-update">Support</div>
+                  </div>
+                </div>
+              </article>
+
+              <article className="promise-card-update">
+                <div className="promise-card-top-update">
+                  <div className="promise-mark-update">
+                    <span className="promise-mark-dot-update" />
+                  </div>
+                  <h3 className="promise-card-title-update">On-Time Delivery</h3>
+                </div>
+
+                <p className="promise-card-text-update">
+                  Clear timelines and regular updates to keep the work smooth and stress-free.
+                </p>
+
+                <div className="promise-list-update">
+                  <div className="promise-item-update">
+                    <span className="promise-bullet-update" />
+                    <span className="promise-item-text-update">Transparent schedules</span>
+                  </div>
+                  <div className="promise-item-update">
+                    <span className="promise-bullet-update" />
+                    <span className="promise-item-text-update">Quick update sharing</span>
+                  </div>
+                  <div className="promise-item-update">
+                    <span className="promise-bullet-update" />
+                    <span className="promise-item-text-update">Clean handover process</span>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div className="promise-grid-update">
-      <article className="promise-card-update">
-        <div className="promise-card-top-update">
-          <div className="promise-mark-update">
-            <span className="promise-mark-dot-update" />
-          </div>
-          <h3 className="promise-card-title-update">Design Support</h3>
-        </div>
-
-        <p className="promise-card-text-update">
-          Practical design decisions that look premium and work perfectly for everyday living.
-        </p>
-
-        <div className="promise-list-update">
-          <div className="promise-item-update">
-            <span className="promise-bullet-update" />
-            <span className="promise-item-text-update">Space planning and layout</span>
-          </div>
-          <div className="promise-item-update">
-            <span className="promise-bullet-update" />
-            <span className="promise-item-text-update">Color and material matching</span>
-          </div>
-          <div className="promise-item-update">
-            <span className="promise-bullet-update" />
-            <span className="promise-item-text-update">Lighting and finishing ideas</span>
-          </div>
-        </div>
-      </article>
-
-      <article className="promise-card-update promise-card-featured-update">
-        <div className="promise-card-top-update">
-          <div className="promise-mark-update">
-            <span className="promise-mark-dot-update" />
-          </div>
-          <h3 className="promise-card-title-update">Quality First</h3>
-        </div>
-
-        <p className="promise-card-text-update">
-          Strong materials and neat execution, so your interiors stay beautiful and last longer.
-        </p>
-
-        <div className="promise-metrics-update">
-          <div className="promise-metric-update">
-            <div className="promise-metric-value-update">A+</div>
-            <div className="promise-metric-label-update">Finish</div>
-          </div>
-          <div className="promise-metric-update">
-            <div className="promise-metric-value-update">0</div>
-            <div className="promise-metric-label-update">Shortcuts</div>
-          </div>
-          <div className="promise-metric-update">
-            <div className="promise-metric-value-update">100%</div>
-            <div className="promise-metric-label-update">Support</div>
-          </div>
-        </div>
-      </article>
-
-      <article className="promise-card-update">
-        <div className="promise-card-top-update">
-          <div className="promise-mark-update">
-            <span className="promise-mark-dot-update" />
-          </div>
-          <h3 className="promise-card-title-update">On-Time Delivery</h3>
-        </div>
-
-        <p className="promise-card-text-update">
-          Clear timelines and regular updates to keep the work smooth and stress-free.
-        </p>
-
-        <div className="promise-list-update">
-          <div className="promise-item-update">
-            <span className="promise-bullet-update" />
-            <span className="promise-item-text-update">Transparent schedules</span>
-          </div>
-          <div className="promise-item-update">
-            <span className="promise-bullet-update" />
-            <span className="promise-item-text-update">Quick update sharing</span>
-          </div>
-          <div className="promise-item-update">
-            <span className="promise-bullet-update" />
-            <span className="promise-item-text-update">Clean handover process</span>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+        </section>
 
         <section className="theme-band" aria-label="Theme banner">
           <img className="theme-band-img" src="/Images/theme.jpg" alt="Inchx Interio theme" />
@@ -696,7 +695,7 @@ const chooseSlidesUpdate = [
           </div>
         </section>
 
-        
+
 
         {/*<section className="cta-hero" aria-label="Call to action banner">
           <img className="cta-hero-img" src="/Images/main-banner2.jpg" alt="Inchx Interio banner" />

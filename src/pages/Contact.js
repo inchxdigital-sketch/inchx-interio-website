@@ -18,7 +18,7 @@ export default function Contact() {
       subtitle: "Premium interior design, modular kitchens, 3D planning, and clean execution for beautiful spaces."
     },
     {
-      image: "/Images/contact-main-hero-2.jpg",
+      image: "/Images/contact-main-hero-4.jpg",
       title: "Design That Feels Personal",
       subtitle: "We understand your space, your lifestyle, and your taste before creating the right interior plan."
     },
@@ -327,6 +327,9 @@ export default function Contact() {
         </section> */}
 
         <section className="contact8-s4-update" aria-label="Project flow">
+  <div className="contact8-bg-orb-update contact8-bg-orb-one-update" />
+  <div className="contact8-bg-orb-update contact8-bg-orb-two-update" />
+
   <div className="contact8-container-update">
     <div className="contact8-head-update contact8-head-invert-update">
       <span className="contact8-eyebrow-update">From idea to handover</span>
@@ -338,7 +341,10 @@ export default function Contact() {
     </div>
 
     <div className="contact8-steps-update">
+      <div className="contact8-flow-line-update" />
+
       <div className="contact8-step-update">
+        <div className="contact8-step-glow-update" />
         <div className="contact8-step-no-update">01</div>
         <div className="contact8-step-content-update">
           <div className="contact8-step-title-update">Discuss</div>
@@ -349,6 +355,7 @@ export default function Contact() {
       </div>
 
       <div className="contact8-step-update">
+        <div className="contact8-step-glow-update" />
         <div className="contact8-step-no-update">02</div>
         <div className="contact8-step-content-update">
           <div className="contact8-step-title-update">Design</div>
@@ -359,6 +366,7 @@ export default function Contact() {
       </div>
 
       <div className="contact8-step-update">
+        <div className="contact8-step-glow-update" />
         <div className="contact8-step-no-update">03</div>
         <div className="contact8-step-content-update">
           <div className="contact8-step-title-update">Estimate</div>
@@ -369,6 +377,7 @@ export default function Contact() {
       </div>
 
       <div className="contact8-step-update">
+        <div className="contact8-step-glow-update" />
         <div className="contact8-step-no-update">04</div>
         <div className="contact8-step-content-update">
           <div className="contact8-step-title-update">Execute</div>
@@ -379,6 +388,7 @@ export default function Contact() {
       </div>
 
       <div className="contact8-step-update">
+        <div className="contact8-step-glow-update" />
         <div className="contact8-step-no-update">05</div>
         <div className="contact8-step-content-update">
           <div className="contact8-step-title-update">Handover</div>

@@ -1351,7 +1351,6 @@
 }
 
 .founder-card-update:hover {
-  transform: translateY(-6px);
   border-color: rgba(240, 201, 48, 0.46);
   box-shadow: 0 28px 74px rgba(0, 0, 0, 0.34);
 }
@@ -1384,9 +1383,7 @@
   transition: transform 0.5s ease;
 }
 
-.founder-card-update:hover .founder-image-update {
-  transform: scale(1.04);
-}
+
 
 .founder-content-update {
   position: relative;

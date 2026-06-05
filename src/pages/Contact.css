@@ -1045,32 +1045,71 @@
 .contact8-s4-update {
   position: relative;
   overflow: hidden;
-  padding: 96px 20px;
+  padding: 104px 20px;
   background:
-    radial-gradient(circle at top left, rgba(240, 201, 48, 0.22), transparent 34%),
-    radial-gradient(circle at bottom right, rgba(25, 38, 46, 0.14), transparent 36%),
-    linear-gradient(135deg, #fffaf0 0%, #f7efe0 45%, #eef4f3 100%);
+    radial-gradient(circle at 15% 18%, rgba(240, 201, 48, 0.22), transparent 32%),
+    radial-gradient(circle at 86% 80%, rgba(141, 108, 52, 0.2), transparent 34%),
+    linear-gradient(135deg, #081014 0%, #101b20 42%, #1a2529 100%);
+  isolation: isolate;
 }
 
 .contact8-s4-update::before {
   content: "";
   position: absolute;
-  inset: 28px;
-  border: 1px solid rgba(25, 38, 46, 0.12);
-  border-radius: 34px;
+  inset: 24px;
+  border: 1px solid rgba(240, 201, 48, 0.18);
+  border-radius: 38px;
   pointer-events: none;
+  z-index: 1;
+}
+
+.contact8-s4-update::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(circle at center, black, transparent 76%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact8-bg-orb-update {
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+  filter: blur(8px);
+  z-index: 0;
+}
+
+.contact8-bg-orb-one-update {
+  width: 320px;
+  height: 320px;
+  top: 90px;
+  left: -120px;
+  background: rgba(240, 201, 48, 0.17);
+}
+
+.contact8-bg-orb-two-update {
+  width: 360px;
+  height: 360px;
+  right: -150px;
+  bottom: 60px;
+  background: rgba(255, 250, 240, 0.09);
 }
 
 .contact8-container-update {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: min(1180px, 100%);
   margin: 0 auto;
 }
 
 .contact8-head-update {
-  max-width: 720px;
-  margin: 0 auto 58px;
+  max-width: 760px;
+  margin: 0 auto 64px;
   text-align: center;
 }
 
@@ -1078,40 +1117,44 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 9px 18px;
-  margin-bottom: 18px;
+  padding: 10px 19px;
+  margin-bottom: 20px;
   border-radius: 999px;
-  background: rgba(25, 38, 46, 0.08);
-  color: #19262e;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1.6px;
+  background: rgba(240, 201, 48, 0.12);
+  border: 1px solid rgba(240, 201, 48, 0.24);
+  color: #f0c930;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
 }
 
 .contact8-h2-update {
   margin: 0;
-  color: #19262e;
-  font-size: clamp(34px, 5vw, 62px);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -1.4px;
+  color: #fff8dc;
+  font-size: clamp(36px, 5vw, 66px);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -1.7px;
+  text-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
 }
 
 .contact8-underline-update {
-  width: 92px;
+  width: 112px;
   height: 5px;
-  margin: 22px auto 22px;
+  margin: 24px auto 24px;
   border-radius: 999px;
-  background: linear-gradient(90deg, #19262e, #f0c930);
+  background: linear-gradient(90deg, transparent, #f0c930, #fff2a8, #f0c930, transparent);
+  box-shadow: 0 0 28px rgba(240, 201, 48, 0.38);
 }
 
 .contact8-p-update {
   margin: 0 auto;
-  max-width: 640px;
-  color: rgba(25, 38, 46, 0.76);
+  max-width: 670px;
+  color: rgba(255, 250, 240, 0.72);
   font-size: 17px;
-  line-height: 1.8;
+  line-height: 1.85;
 }
 
 .contact8-steps-update {
@@ -1119,77 +1162,107 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 22px;
+  align-items: stretch;
 }
 
-.contact8-steps-update::before {
-  content: "";
+.contact8-flow-line-update {
   position: absolute;
-  top: 44px;
+  top: 48px;
   left: 7%;
   right: 7%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(25, 38, 46, 0.24), transparent);
+  background: linear-gradient(90deg, transparent, rgba(240, 201, 48, 0.22), rgba(255, 248, 220, 0.32), rgba(240, 201, 48, 0.22), transparent);
+  z-index: 0;
 }
 
 .contact8-step-update {
   position: relative;
-  min-height: 250px;
-  padding: 26px 22px 28px;
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.76);
-  border: 1px solid rgba(25, 38, 46, 0.1);
-  box-shadow: 0 24px 70px rgba(25, 38, 46, 0.12);
-  backdrop-filter: blur(14px);
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  min-height: 270px;
+  padding: 28px 22px 30px;
+  border-radius: 30px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.055)),
+    rgba(255, 250, 240, 0.06);
+  border: 1px solid rgba(255, 248, 220, 0.14);
+  box-shadow:
+    0 28px 76px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(18px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+  z-index: 1;
+  overflow: hidden;
 }
 
 .contact8-step-update:hover {
-  transform: translateY(-10px);
-  border-color: rgba(240, 201, 48, 0.62);
-  box-shadow: 0 32px 90px rgba(25, 38, 46, 0.18);
+  transform: translateY(-12px);
+  border-color: rgba(240, 201, 48, 0.52);
+  background:
+    linear-gradient(145deg, rgba(240, 201, 48, 0.18), rgba(255, 255, 255, 0.07)),
+    rgba(255, 250, 240, 0.08);
+  box-shadow:
+    0 38px 96px rgba(0, 0, 0, 0.34),
+    0 0 42px rgba(240, 201, 48, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.contact8-step-glow-update {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -78px;
+  right: -74px;
+  border-radius: 999px;
+  background: rgba(240, 201, 48, 0.17);
+  filter: blur(4px);
+  pointer-events: none;
 }
 
 .contact8-step-no-update {
   position: relative;
   z-index: 2;
-  width: 68px;
-  height: 68px;
-  margin: 0 auto 28px;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 30px;
   display: grid;
   place-items: center;
-  border-radius: 22px;
-  background: linear-gradient(135deg, #19262e, #31434d);
-  color: #f0c930;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 32% 22%, #fff4b4, #f0c930 42%, #9b7227 100%);
+  color: #111a1e;
   font-size: 21px;
-  font-weight: 900;
+  font-weight: 950;
   letter-spacing: 0.8px;
-  box-shadow: 0 16px 34px rgba(25, 38, 46, 0.26);
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.28),
+    0 0 0 7px rgba(240, 201, 48, 0.1);
 }
 
 .contact8-step-no-update::after {
   content: "";
   position: absolute;
-  inset: -7px;
-  border-radius: 26px;
-  border: 1px solid rgba(240, 201, 48, 0.55);
+  inset: -8px;
+  border-radius: 29px;
+  border: 1px solid rgba(240, 201, 48, 0.42);
 }
 
 .contact8-step-content-update {
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .contact8-step-title-update {
   margin-bottom: 12px;
-  color: #19262e;
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.3px;
+  color: #fff8dc;
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: -0.4px;
 }
 
 .contact8-step-sub-update {
-  color: rgba(25, 38, 46, 0.72);
+  color: rgba(255, 250, 240, 0.68);
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 @media (max-width: 1100px) {
@@ -1197,33 +1270,44 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .contact8-steps-update::before {
+  .contact8-flow-line-update {
     display: none;
   }
 }
 
 @media (max-width: 768px) {
   .contact8-s4-update {
-    padding: 76px 16px;
+    padding: 78px 16px;
   }
 
   .contact8-s4-update::before {
     inset: 14px;
-    border-radius: 24px;
+    border-radius: 26px;
   }
 
   .contact8-head-update {
-    margin-bottom: 38px;
+    margin-bottom: 42px;
   }
 
   .contact8-p-update {
     font-size: 15.5px;
-    line-height: 1.7;
+    line-height: 1.75;
   }
 
   .contact8-steps-update {
     grid-template-columns: 1fr;
     gap: 18px;
+  }
+
+  .contact8-steps-update::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: 35px;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, rgba(240, 201, 48, 0.32), rgba(255, 248, 220, 0.22), transparent);
+    z-index: 0;
   }
 
   .contact8-step-update {
@@ -1232,7 +1316,7 @@
     align-items: flex-start;
     gap: 18px;
     padding: 22px;
-    border-radius: 24px;
+    border-radius: 26px;
   }
 
   .contact8-step-no-update {
@@ -1240,12 +1324,13 @@
     width: 58px;
     height: 58px;
     margin: 0;
-    border-radius: 18px;
+    border-radius: 20px;
     font-size: 18px;
   }
 
   .contact8-step-no-update::after {
-    border-radius: 22px;
+    inset: -6px;
+    border-radius: 24px;
   }
 
   .contact8-step-content-update {
@@ -1253,23 +1338,57 @@
   }
 
   .contact8-step-title-update {
-    font-size: 20px;
+    font-size: 21px;
     margin-bottom: 8px;
   }
 
   .contact8-step-sub-update {
     font-size: 14.5px;
+    line-height: 1.65;
   }
 }
 
 @media (max-width: 420px) {
   .contact8-s4-update {
-    padding: 64px 12px;
+    padding: 66px 12px;
+  }
+
+  .contact8-s4-update::before {
+    inset: 10px;
+    border-radius: 22px;
+  }
+
+  .contact8-head-update {
+    margin-bottom: 34px;
+  }
+
+  .contact8-eyebrow-update {
+    font-size: 10.5px;
+    padding: 8px 13px;
+    letter-spacing: 1.35px;
+  }
+
+  .contact8-h2-update {
+    font-size: clamp(32px, 12vw, 44px);
+    letter-spacing: -1px;
+  }
+
+  .contact8-p-update {
+    font-size: 14.5px;
+  }
+
+  .contact8-steps-update {
+    gap: 14px;
+  }
+
+  .contact8-steps-update::before {
+    left: 30px;
   }
 
   .contact8-step-update {
     padding: 18px;
     gap: 14px;
+    border-radius: 22px;
   }
 
   .contact8-step-no-update {
@@ -1277,11 +1396,19 @@
     width: 52px;
     height: 52px;
     font-size: 16px;
+    border-radius: 17px;
   }
 
-  .contact8-eyebrow-update {
-    font-size: 11px;
-    padding: 8px 14px;
+  .contact8-step-no-update::after {
+    border-radius: 21px;
+  }
+
+  .contact8-step-title-update {
+    font-size: 19px;
+  }
+
+  .contact8-step-sub-update {
+    font-size: 13.8px;
   }
 }
 
