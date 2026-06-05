@@ -496,7 +496,7 @@ const chooseSlidesUpdate = [
 
             <div className="grid-item grid-title">
               <h2 className="grid-title-text">
-                Inch X <br />
+                InchX <br />
                 Interio
               </h2>
             </div>
