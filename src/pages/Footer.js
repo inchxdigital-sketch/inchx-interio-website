@@ -52,11 +52,6 @@ function Footer() {
       ]
     },
     {
-      key: "finishes",
-      title: "Finishes",
-      items: ["Handles", "Kitchen Cabinets", "Wardrobe Cabinets"]
-    },
-    {
       key: "furnishings",
       title: "Furnishings",
       items: ["Curtains", "Blinds", "Wallpapers", "Bedsheets & Comforters"]
