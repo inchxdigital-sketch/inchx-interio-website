@@ -1335,7 +1335,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: clamp(20px, 3vw, 34px);
-  align-items: start;
+  align-items: stretch;
 }
 
 .founder-card-update {
@@ -1345,14 +1345,8 @@
   overflow: hidden;
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(240, 201, 48, 0.24);
+  border: 1px solid rgba(240, 201, 48, 0.22);
   box-shadow: 0 22px 62px rgba(0, 0, 0, 0.28);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.founder-card-update:hover {
-  border-color: rgba(240, 201, 48, 0.46);
-  box-shadow: 0 28px 74px rgba(0, 0, 0, 0.34);
 }
 
 .founder-image-wrap-update {
@@ -1367,11 +1361,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 58%,
-    rgba(0, 0, 0, 0.32) 100%
-  );
+  background: rgba(0, 0, 0, 0.174);
   pointer-events: none;
 }
 
@@ -1380,10 +1370,7 @@
   height: 100%;
   display: block;
   object-fit: cover;
-  transition: transform 0.5s ease;
 }
-
-
 
 .founder-content-update {
   position: relative;
@@ -1473,26 +1460,14 @@
   font-weight: 800;
   letter-spacing: 0.02em;
   box-shadow: 0 14px 30px rgba(24, 38, 45, 0.2);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .founder-read-btn-update span {
   display: inline-flex;
-  transition: transform 0.25s ease;
-}
-
-.founder-read-btn-update:hover {
-  transform: translateY(-3px);
-  background: #0f1a20;
-  box-shadow: 0 18px 36px rgba(24, 38, 45, 0.26);
-}
-
-.founder-read-btn-update:hover span {
-  transform: translateX(4px);
 }
 
 .founder-more-update {
-  animation: founderRevealUpdate 0.36s ease both;
+  animation: founderRevealUpdate 0.28s ease both;
 }
 
 .founder-action-update {
@@ -1508,24 +1483,13 @@
   box-shadow: none;
 }
 
-.founder-read-btn-light-update:hover {
-  background: rgba(240, 201, 48, 0.32);
-  box-shadow: 0 14px 28px rgba(24, 38, 45, 0.12);
-}
-
-.founder-read-btn-light-update:hover span {
-  transform: translateY(-3px);
-}
-
 @keyframes founderRevealUpdate {
   from {
     opacity: 0;
-    transform: translateY(14px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -1550,10 +1514,6 @@
 
   .founder-card-update {
     border-radius: 22px;
-  }
-
-  .founder-card-update:hover {
-    transform: none;
   }
 
   .founder-image-wrap-update {
