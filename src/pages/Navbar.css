@@ -359,9 +359,8 @@ body {
   }
 
   .brand-logo1 {
-    width: 46px;
+    width: 100% !important;
     height: 46px;
-    border-radius: 12px;
   }
 
   .brand-name {
