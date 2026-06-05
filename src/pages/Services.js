@@ -355,7 +355,7 @@ const faqServicesItems = [
           </div>
         </section> */}
 
-        <section className="regions" aria-label="Regions we serve">
+        {/*<section className="regions" aria-label="Regions we serve">
   <div className="regions-inner">
     <div className="regions-grid">
       <div className="regions-left">
@@ -399,7 +399,7 @@ const faqServicesItems = [
       </div>
     </div>
   </div>
-</section>
+</section> */}
 
         <section className="featured" aria-label="Featured highlights">
           <div className="featured-inner">

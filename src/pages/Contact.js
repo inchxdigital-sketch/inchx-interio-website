@@ -13,7 +13,7 @@ export default function Contact() {
 
   const heroSlides = [
     {
-      image: "/Images/contact1.jpg",
+      image: "/Images/contact4.jpg",
       title: "Contact",
       subtitle: "Premium interior design, modular kitchens, 3D planning, and clean execution for beautiful spaces."
     },
@@ -79,43 +79,43 @@ export default function Contact() {
 
       <main className="contact8" id="contact">
         <section className="contact8-hero-update" aria-label="Contact hero slideshow">
-  {heroSlides.map((slide, index) => (
-    <div
-      className={`contact8-hero-slide-update ${activeSlide === index ? "active-update" : ""}`}
-      key={slide.image}
-    >
-      <img className="contact8-hero-img-update" src={slide.image} alt={slide.title} />
-    </div>
-  ))}
+          {heroSlides.map((slide, index) => (
+            <div
+              className={`contact8-hero-slide-update ${activeSlide === index ? "active-update" : ""}`}
+              key={slide.image}
+            >
+              <img className="contact8-hero-img-update" src={slide.image} alt={slide.title} />
+            </div>
+          ))}
 
-  <div className="contact8-hero-overlay-update" />
+          <div className="contact8-hero-overlay-update" />
 
-  <div className="contact8-hero-content-update">
-    <h1 className="contact8-hero-title-update">{heroSlides[activeSlide].title}</h1>
+          <div className="contact8-hero-content-update">
+            <h1 className="contact8-hero-title-update">{heroSlides[activeSlide].title}</h1>
 
-    <p className="contact8-hero-sub-update">{heroSlides[activeSlide].subtitle}</p>
+            <p className="contact8-hero-sub-update">{heroSlides[activeSlide].subtitle}</p>
 
-    <div className="contact8-hero-badges-update" aria-label="Service regions">
-      <span className="contact8-badge-update">Andhra Pradesh</span>
-      <span className="contact8-badge-update">Telangana</span>
-      <span className="contact8-badge-update">Karnataka</span>
-      <span className="contact8-badge-update">Odisha</span>
-      <span className="contact8-badge-update">Expanding Across India</span>
-    </div>
+            <div className="contact8-hero-badges-update" aria-label="Service regions">
+              <span className="contact8-badge-update">Andhra Pradesh</span>
+              <span className="contact8-badge-update">Telangana</span>
+              <span className="contact8-badge-update">Karnataka</span>
+              <span className="contact8-badge-update">Odisha</span>
+              <span className="contact8-badge-update">Expanding Across India</span>
+            </div>
 
-    <div className="contact8-slide-dots-update" aria-label="Hero slideshow controls">
-      {heroSlides.map((slide, index) => (
-        <button
-          type="button"
-          key={slide.image}
-          className={`contact8-slide-dot-update ${activeSlide === index ? "active-update" : ""}`}
-          aria-label={`Show slide ${index + 1}`}
-          onClick={() => setActiveSlide(index)}
-        />
-      ))}
-    </div>
-  </div>
-</section>
+            <div className="contact8-slide-dots-update" aria-label="Hero slideshow controls">
+              {heroSlides.map((slide, index) => (
+                <button
+                  type="button"
+                  key={slide.image}
+                  className={`contact8-slide-dot-update ${activeSlide === index ? "active-update" : ""}`}
+                  aria-label={`Show slide ${index + 1}`}
+                  onClick={() => setActiveSlide(index)}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section className="contact8-s1" aria-label="Quick contact">
           <div className="contact8-container">
@@ -165,7 +165,7 @@ export default function Contact() {
 
             <div className="contact8-coverage-grid">
               <div className="contact8-coverage-left">
-                
+
 
                 <div className="contact8-mapwrap" aria-label="Google map">
                   <iframe
@@ -199,63 +199,96 @@ export default function Contact() {
           </div>
         </section>
 
-        <section className="contact8-s2" aria-label="Service coverage">
-          <div className="contact8-container">
-            <div className="contact8-s2-grid">
-              <div className="contact8-s2-left">
-                <h2 className="contact8-h2 contact8-h2-invert">What We Do</h2>
-                <div className="contact8-underline contact8-underline-invert" />
-                <p className="contact8-p contact8-p-invert">
-                  We create interiors that look premium, feel comfortable, and work practically for everyday living.
-                </p>
+        <section className="contact8-s2-final-update" aria-label="Service coverage">
+  <div className="contact8-container-final-update">
+    <div className="contact8-s2-grid-final-update">
+      <div className="contact8-s2-left-final-update">
+        <span className="contact8-s2-kicker-final-update">Interior Design Studio</span>
 
-                <div className="contact8-tags">
-                  {services.map((service) => (
-                    <span className="contact8-tag" key={service}>
-                      {service}
-                    </span>
-                  ))}
-                </div>
+        <h2 className="contact8-h2-final-update contact8-h2-invert-final-update">
+          What We Do
+        </h2>
 
-                <div className="contact8-s2-actions">
-                  <a className="contact8-btn contact8-btn-solid" href="tel:+919393141224">
-                    Call Now
-                  </a>
-                  <a className="contact8-btn contact8-btn-outline" href="mailto:inchxinterio@gmail.com">
-                    Email Us
-                  </a>
-                </div>
-              </div>
+        <div className="contact8-underline-final-update contact8-underline-invert-final-update" />
 
-              <div className="contact8-s2-right">
-                <div className="contact8-s2-tiles">
-                  <div className="contact8-tile">
-                    <div className="contact8-tile-top">Design Clarity</div>
-                    <div className="contact8-tile-sub">Layouts, materials, colors, and finish plans made easy to understand.</div>
-                  </div>
-                  <div className="contact8-tile">
-                    <div className="contact8-tile-top">Premium Finish</div>
-                    <div className="contact8-tile-sub">Rich detailing with clean edges, balanced textures, and practical materials.</div>
-                  </div>
-                  <div className="contact8-tile">
-                    <div className="contact8-tile-top">Site Planning</div>
-                    <div className="contact8-tile-sub">Clear execution flow with measurements, timelines, and regular updates.</div>
-                  </div>
-                  <div className="contact8-tile">
-                    <div className="contact8-tile-top">Custom Work</div>
-                    <div className="contact8-tile-sub">Solutions made for your space, taste, storage needs, and lifestyle.</div>
-                  </div>
-                </div>
+        <p className="contact8-p-final-update contact8-p-invert-final-update">
+          We design warm, elegant, and functional interiors that bring comfort, beauty, and personality into every corner of your space.
+        </p>
 
-                <div className="contact8-s2-photo">
-                  <img src="/Images/theme.jpg" alt="Interior design preview" />
-                </div>
+        <div className="contact8-tags-final-update">
+          {services.map((service) => (
+            <span className="contact8-tag-final-update" key={service}>
+              {service}
+            </span>
+          ))}
+        </div>
+
+        <div className="contact8-s2-actions-final-update">
+          <a className="contact8-btn-final-update contact8-btn-solid-final-update" href="tel:+919393141224">
+            Call Now
+          </a>
+          <a className="contact8-btn-final-update contact8-btn-outline-final-update" href="mailto:inchxinterio@gmail.com">
+            Email Us
+          </a>
+        </div>
+      </div>
+
+      <div className="contact8-s2-right-final-update">
+        <div className="contact8-s2-image-wrap-final-update">
+          <img src="/Images/theme.jpg" alt="Interior design preview" />
+
+          <div className="contact8-s2-image-label-final-update">
+            <span className="contact8-s2-label-title-final-update">Premium Spaces</span>
+            <span className="contact8-s2-label-text-final-update">Designed with clarity and care</span>
+          </div>
+        </div>
+
+        <div className="contact8-s2-cards-final-update">
+          <div className="contact8-tile-final-update">
+            <span className="contact8-tile-no-final-update">01</span>
+            <div className="contact8-tile-body-final-update">
+              <div className="contact8-tile-top-final-update">Design Clarity</div>
+              <div className="contact8-tile-sub-final-update">
+                Layouts, materials, colors, and finishes explained clearly before work starts.
               </div>
             </div>
           </div>
-        </section>
 
-        
+          <div className="contact8-tile-final-update">
+            <span className="contact8-tile-no-final-update">02</span>
+            <div className="contact8-tile-body-final-update">
+              <div className="contact8-tile-top-final-update">Elegant Finish</div>
+              <div className="contact8-tile-sub-final-update">
+                Balanced textures, clean detailing, and a premium look for modern spaces.
+              </div>
+            </div>
+          </div>
+
+          <div className="contact8-tile-final-update">
+            <span className="contact8-tile-no-final-update">03</span>
+            <div className="contact8-tile-body-final-update">
+              <div className="contact8-tile-top-final-update">Smart Planning</div>
+              <div className="contact8-tile-sub-final-update">
+                Practical site planning with proper measurements, timelines, and updates.
+              </div>
+            </div>
+          </div>
+
+          <div className="contact8-tile-final-update">
+            <span className="contact8-tile-no-final-update">04</span>
+            <div className="contact8-tile-body-final-update">
+              <div className="contact8-tile-top-final-update">Custom Work</div>
+              <div className="contact8-tile-sub-final-update">
+                Personalized solutions based on your taste, storage needs, and lifestyle.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
         {/*<section className="contact8-s3" aria-label="Business details">
           <div className="contact8-container">
             <div className="contact8-s3-grid">
@@ -293,43 +326,70 @@ export default function Contact() {
           </div>
         </section> */}
 
-        <section className="contact8-s4" aria-label="Project flow">
-          <div className="contact8-container">
-            <div className="contact8-head contact8-head-invert">
-              <h2 className="contact8-h2 contact8-h2-invert">Project Flow</h2>
-              <div className="contact8-underline contact8-underline-invert" />
-              <p className="contact8-p contact8-p-invert">A simple step-by-step flow so you always know what is next.</p>
-            </div>
+        <section className="contact8-s4-update" aria-label="Project flow">
+  <div className="contact8-container-update">
+    <div className="contact8-head-update contact8-head-invert-update">
+      <span className="contact8-eyebrow-update">From idea to handover</span>
+      <h2 className="contact8-h2-update contact8-h2-invert-update">Project Flow</h2>
+      <div className="contact8-underline-update contact8-underline-invert-update" />
+      <p className="contact8-p-update contact8-p-invert-update">
+        A clear, elegant process designed to make every space feel planned, refined, and beautifully executed.
+      </p>
+    </div>
 
-            <div className="contact8-steps">
-              <div className="contact8-step">
-                <div className="contact8-step-no">01</div>
-                <div className="contact8-step-title">Discuss</div>
-                <div className="contact8-step-sub">We understand your space, taste, needs, and budget.</div>
-              </div>
-              <div className="contact8-step">
-                <div className="contact8-step-no">02</div>
-                <div className="contact8-step-title">Design</div>
-                <div className="contact8-step-sub">We plan the layout, look, materials, and 3D design when needed.</div>
-              </div>
-              <div className="contact8-step">
-                <div className="contact8-step-no">03</div>
-                <div className="contact8-step-title">Estimate</div>
-                <div className="contact8-step-sub">You get clear cost options before starting the work.</div>
-              </div>
-              <div className="contact8-step">
-                <div className="contact8-step-no">04</div>
-                <div className="contact8-step-title">Execute</div>
-                <div className="contact8-step-sub">Our team handles the site work with neat execution.</div>
-              </div>
-              <div className="contact8-step">
-                <div className="contact8-step-no">05</div>
-                <div className="contact8-step-title">Handover</div>
-                <div className="contact8-step-sub">Final checks, finishing, and handover after completion.</div>
-              </div>
-            </div>
+    <div className="contact8-steps-update">
+      <div className="contact8-step-update">
+        <div className="contact8-step-no-update">01</div>
+        <div className="contact8-step-content-update">
+          <div className="contact8-step-title-update">Discuss</div>
+          <div className="contact8-step-sub-update">
+            We understand your space, taste, lifestyle, requirements, and budget.
           </div>
-        </section>
+        </div>
+      </div>
+
+      <div className="contact8-step-update">
+        <div className="contact8-step-no-update">02</div>
+        <div className="contact8-step-content-update">
+          <div className="contact8-step-title-update">Design</div>
+          <div className="contact8-step-sub-update">
+            We shape the layout, materials, colours, finishes, and 3D concepts when needed.
+          </div>
+        </div>
+      </div>
+
+      <div className="contact8-step-update">
+        <div className="contact8-step-no-update">03</div>
+        <div className="contact8-step-content-update">
+          <div className="contact8-step-title-update">Estimate</div>
+          <div className="contact8-step-sub-update">
+            You receive transparent cost options before the execution begins.
+          </div>
+        </div>
+      </div>
+
+      <div className="contact8-step-update">
+        <div className="contact8-step-no-update">04</div>
+        <div className="contact8-step-content-update">
+          <div className="contact8-step-title-update">Execute</div>
+          <div className="contact8-step-sub-update">
+            Our team manages the site work with careful detailing and clean execution.
+          </div>
+        </div>
+      </div>
+
+      <div className="contact8-step-update">
+        <div className="contact8-step-no-update">05</div>
+        <div className="contact8-step-content-update">
+          <div className="contact8-step-title-update">Handover</div>
+          <div className="contact8-step-sub-update">
+            Final finishing, quality checks, and handover after complete satisfaction.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
         <section className="contact8-s8" aria-label="Final call to action">
           <div className="contact8-container">

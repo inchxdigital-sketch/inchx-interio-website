@@ -21,7 +21,12 @@ function Gallery() {
           "/Images/gallery/facade-5.jpg",
           "/Images/gallery/facade-6.jpg",
           "/Images/gallery/facade-7.jpg",
-          "/Images/gallery/facade-8.jpg"
+          "/Images/gallery/facade-8.jpg",
+          "/Images/gallery/facade-9.jpeg",
+          "/Images/gallery/facade-10.jpeg",
+          "/Images/gallery/facade-11.jpeg",
+          "/Images/gallery/facade-12.jpeg"
+
         ]
       },
       {
@@ -35,7 +40,11 @@ function Gallery() {
           "/Images/own/gallery/living-5.jpeg",
           "/Images/own/gallery/living-6.jpeg",
           "/Images/own/gallery/living-7.jpeg",
-          "/Images/own/gallery/living-8.jpeg"
+          "/Images/own/gallery/living-8.jpeg",
+          "/Images/gallery/living-9.jpg",
+          "/Images/gallery/living-10.jpg",
+          "/Images/gallery/living-11.jpg",
+          "/Images/gallery/living-12.jpg"
         ]
       },
       {
@@ -49,7 +58,11 @@ function Gallery() {
           "/Images/own/gallery/bedroom-5.jpeg",
           "/Images/own/gallery/bedroom-6.jpeg",
           "/Images/own/gallery/bedroom-7.jpeg",
-          "/Images/own/gallery/bedroom-8.jpeg"
+          "/Images/own/gallery/bedroom-8.jpeg",
+          "/Images/gallery/bedroom-9.jpg",
+          "/Images/gallery/bedroom-10.jpg",
+          "/Images/gallery/bedroom-11.jpg",
+          "/Images/gallery/bedroom-12.jpg",
         ]
       },
       {
@@ -63,7 +76,11 @@ function Gallery() {
           "/Images/own/gallery/kitchen-5.jpeg",
           "/Images/own/gallery/kitchen-6.jpeg",
           "/Images/own/gallery/kitchen-7.jpeg",
-          "/Images/own/gallery/kitchen-8.jpeg"
+          "/Images/own/gallery/kitchen-8.jpeg",
+          "/Images/gallery/kitchen-9.jpg",
+          "/Images/gallery/kitchen-10.jpg",
+          "/Images/gallery/kitchen-11.jpg",
+          "/Images/gallery/kitchen-12.jpg"
         ]
       },
       {
@@ -77,7 +94,12 @@ function Gallery() {
           "/Images/gallery/ceiling-5.jpg",
           "/Images/gallery/ceiling-6.jpg",
           "/Images/gallery/ceiling-7.jpg",
-          "/Images/gallery/ceiling-8.jpg"
+          "/Images/gallery/ceiling-8.jpg",
+          "/Images/gallery/ceiling-9.jpeg",
+          "/Images/gallery/ceiling-10.jpeg",
+          "/Images/gallery/ceiling-11.jpeg",
+          "/Images/gallery/ceiling-12.jpeg",
+
         ]
       }
     ],

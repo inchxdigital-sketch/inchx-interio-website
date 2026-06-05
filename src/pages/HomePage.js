@@ -163,7 +163,7 @@ const chooseSlidesUpdate = [
           </div>
         </section> */}
 
-        <section className="hero" aria-label="Main banner">
+        {/*<section className="hero" aria-label="Main banner">
           <img className="hero-img" src="/Images/main-banner3.jpg" alt="Kalki's Inchx Interio banner" />
           <div className="hero-overlay" />
           <div className="hero-content">
@@ -184,7 +184,7 @@ const chooseSlidesUpdate = [
               Made for your routine, your comfort, and your style.
             </p>
           </div>
-        </section>
+        </section> */}
 
        <section className="split-banner-section" aria-label="Explore categories">
   <div className="split-banner-inner">
@@ -405,7 +405,7 @@ const chooseSlidesUpdate = [
           </div>
         </section> */}
 
-        <section className="signature-sec">
+        {/*<section className="signature-sec">
           <div className="signature-inner">
             <div className="signature-head">
               <p className="signature-kicker">INCHX INTERIO</p>
@@ -468,7 +468,7 @@ const chooseSlidesUpdate = [
               </article>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="grid-section" aria-label="Highlights grid">
           <div className="grid-wrap">
@@ -496,8 +496,7 @@ const chooseSlidesUpdate = [
 
             <div className="grid-item grid-title">
               <h2 className="grid-title-text">
-                Kalki's <br />
-                Inchx <br />
+                Inch X <br />
                 Interio
               </h2>
             </div>

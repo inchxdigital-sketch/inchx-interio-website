@@ -44,8 +44,8 @@ function Footer() {
         "Modular Interiors",
         "Full Home Interiors",
         "Luxury Interiors",
-        "Livspace Kitchen",
-        "Livspace Wardrobe",
+        "Live space Kitchen",
+        "Live space Wardrobe",
         "Home Interior Price Calculator",
         "Modular Kitchen Price",
         "Wardrobe Price Calculator"
@@ -83,7 +83,7 @@ function Footer() {
         "TV Unit Designs",
         "Modular Kitchen",
         "False Ceiling Designs",
-        "Homes by Livspace",
+        "Homes by Live space",
         "Window Designs",
         "Flooring Designs",
         "Wall Decor Designs",
@@ -116,19 +116,18 @@ function Footer() {
     },
     {
       key: "tv",
-      title: "Livspace TV",
+      title: "Design Styles",
       items: [
-        "1BHK",
-        "2BHK",
-        "3BHK",
-        "4BHK",
-        "Kitchen Designs",
-        "Bedroom Designs",
-        "Living Room Designs",
-        "Wardrobe Designs",
-        "Design Inspiration",
-        "Expert Advice",
-        "Vastu Tips"
+        "Scandinavian",
+        "Japandi",
+        "Boho",
+        "Country House",
+        "MidCentury",
+        "Industrial",
+        "Minimalistic",
+        "Traditional",
+        "Neutral Style",
+        "Contemporary"
       ]
     }
   ];
@@ -165,7 +164,7 @@ function Footer() {
               <a href="https://www.instagram.com/inchx_interio/" className="social-btn-final" aria-label="Instagram" target="_blank" rel="noreferrer">
                 <FaInstagram />
               </a>
-              <a href="https://www.linkedin.com/" className="social-btn-final" aria-label="LinkedIn" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/inchxinterio?utm_source=share_via&utm_content=profile&utm_medium=member_ios" className="social-btn-final" aria-label="LinkedIn" target="_blank" rel="noreferrer">
                 <FaLinkedinIn />
               </a>
               <a href="https://www.youtube.com/" className="social-btn-final" aria-label="YouTube" target="_blank" rel="noreferrer">

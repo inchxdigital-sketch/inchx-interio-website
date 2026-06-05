@@ -1,31 +1,38 @@
-import React from "react";
+import { useState } from "react";
 import "./About.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 export default function About() {
 
+   const [showFullAbout, setShowFullAbout] = useState(false);
+
+    const [expandedFounder, setExpandedFounder] = useState({
+    kanna: false,
+    hari: false,
+  });
+
   const philosophyCards = [
   {
-    number: "01",
+    number: "",
     title: "Crafting Unique Identities",
     icon: "/Images/copy1.jpg",
     text: "We believe every space and every client carries a distinct story. Our design philosophy begins with understanding these individual narratives and translating them into bespoke environments. Each project is thoughtfully crafted to reflect personality, purpose, and lifestyle, turning ideas into meaningful spatial expressions."
   },
   {
-    number: "02",
+    number: "",
     title: "Evocative Experiences",
     icon: "/Images/copy2.jpg",
     text: "Our approach goes beyond visual aesthetics. We focus on creating immersive environments that engage the senses and emotions of those who inhabit them. Every detail is designed to evoke comfort, connection, and experience, ensuring that spaces leave a lasting emotional imprint."
   },
   {
-    number: "03",
+    number: "",
     title: "Timelessness and Modernity",
     icon: "/Images/copy3.jpg",
     text: "We design with longevity in mind. Our spaces are rooted in timeless principles of proportion, harmony, and elegance, while embracing modern functionality and evolving lifestyles. The result is design that remains relevant, refined, and enduring across time."
   },
   {
-    number: "04",
+    number: "",
     title: "Elevating Everyday Living",
     icon: "/Images/copy4.jpg",
     text: "At INCH X INTERIO, we believe luxury is not just appearance, it is experience, comfort, and detail. Through careful planning, refined materials, and precise execution, we elevate everyday spaces into environments that feel purposeful, elegant, and complete."
@@ -38,7 +45,7 @@ export default function About() {
       <main className="about8">
         <section className="about-main-hero-image-section">
           <img
-            src="/Images/about-main-hero.png"
+            src="/Images/about-main-hero-5.png"
             alt="About Inch X Interio"
             className="about-main-hero-image"
           />
@@ -71,184 +78,287 @@ export default function About() {
           </div>
         </section> */}
 
-        <section className="about-simple-section" aria-label="About INCH X INTERIO">
-  <div className="about-simple-inner">
-    <header className="about-simple-head">
-      <span className="about-simple-label">About INCH X INTERIO</span>
-      <h2 className="about-simple-title">
-        A young and dynamic interior design studio built on precision, creativity, and execution.
-      </h2>
-      <p className="about-simple-intro">
-        Founded on 12th December 2022, INCH X INTERIO brings design sensibility and technical excellence together under one roof.
-      </p>
-    </header>
+ 
 
-    <div className="about-simple-highlights">
-      <div className="about-simple-highlight">
-        <span className="about-simple-highlight-value">2022</span>
-        <span className="about-simple-highlight-text">Founded</span>
-      </div>
+ 
+    <section className="about-simple-section" aria-label="About INCH X INTERIO">
+      <div className="about-simple-inner">
+        <header className="about-simple-head">
+          <span className="about-simple-label">About INCH X INTERIO</span>
+          <h2 className="about-simple-title">
+            A young and dynamic interior design studio built on precision, creativity, and execution.
+          </h2>
+        </header>
 
-      <div className="about-simple-highlight">
-        <span className="about-simple-highlight-value">Global</span>
-        <span className="about-simple-highlight-text">Design Exposure</span>
-      </div>
+        <div className="about-simple-highlights">
+          <div className="about-simple-highlight">
+            <span className="about-simple-highlight-value">2022</span>
+            <span className="about-simple-highlight-text">Founded</span>
+          </div>
 
-      <div className="about-simple-highlight">
-        <span className="about-simple-highlight-value">BNA</span>
-        <span className="about-simple-highlight-text">Industry Association</span>
-      </div>
+          <div className="about-simple-highlight">
+            <span className="about-simple-highlight-value">Global</span>
+            <span className="about-simple-highlight-text">Design Exposure</span>
+          </div>
 
-      <div className="about-simple-highlight">
-        <span className="about-simple-highlight-value">360°</span>
-        <span className="about-simple-highlight-text">Design & Execution</span>
-      </div>
-    </div>
+          <div className="about-simple-highlight">
+            <span className="about-simple-highlight-value">BNI</span>
+            <span className="about-simple-highlight-text">Industry Association</span>
+          </div>
 
-    <div className="about-simple-content">
-      <p>
-        Founded on 12th December 2022, INCH X INTERIO is a young and dynamic interior design and execution studio driven by ambition, precision, and creativity. Built on a shared vision between two passionate professionals, an Executive Diploma holder in Interior Designing and a Civil Engineer with international exposure in the United States, the studio brings together design sensibility and technical excellence under one roof.
-      </p>
-
-      <p>
-        From the very beginning, INCH X INTERIO has focused on delivering thoughtfully crafted spaces that balance aesthetics, functionality, and structural integrity. With expertise across both commercial and domestic sectors, the studio has successfully executed a growing portfolio of projects that reflect innovation, attention to detail, and client-centric design solutions.
-      </p>
-
-      <p>
-        Working closely with interior vendors, contractors, and execution partners, the firm has built strong collaborations across the industry, enabling seamless delivery of turnkey and design-build projects. This collaborative ecosystem has allowed INCH X INTERIO to contribute to a diverse range of residential interiors, commercial spaces, and customized design executions with consistency and quality.
-      </p>
-
-      <p>
-        As part of continuous learning and global exposure, the team has traveled to Dubai, China, Thailand, and other international destinations, exploring design innovation, materials, and architectural practices to bring global standards into local execution. These experiences help the studio understand diverse architectural styles, material innovations, and execution techniques, which are thoughtfully integrated into its projects.
-      </p>
-
-      <p>
-        Over a short span, the studio has received appreciation from leading industry partners, including recognition from one of India&apos;s largest plywood companies with a strong international presence in Dubai. These acknowledgements stand as a testament to the firm&apos;s commitment to quality, reliability, and design excellence.
-      </p>
-
-      <p>
-        INCH X INTERIO is also proudly associated with BNA, further strengthening its presence within the architecture and design community and enabling stronger industry collaboration and visibility.
-      </p>
-
-      <p>
-        The founders have actively participated in several design, architecture, and entrepreneurship conferences across Mumbai, Bangalore, and Hyderabad, gaining valuable exposure to evolving global design trends, construction technologies, and innovative material applications. This continuous engagement with the industry has helped shape a forward-thinking and adaptable design approach.
-      </p>
-
-      <p>
-        The journey of INCH X INTERIO as emerging entrepreneurs was further recognized when the founders were invited by GMR Deemed to be University on the occasion of World Entrepreneur Day, where they were honored as young entrepreneurs for their contribution to the design and construction field.
-      </p>
-
-      <div className="about-simple-recognition">
-        <h3 className="about-simple-subtitle">Recognitions & Felicitations</h3>
-        <p>
-          The firm&apos;s work has also been recognized and felicitated by respected public representatives during key project milestones and housewarming ceremonies in 2024 and 2025.
-        </p>
-
-        <ul className="about-simple-list">
-          <li>Hon&apos;ble MLA of Srikakulam, Shri Gondu Shankar Garu</li>
-          <li>Hon&apos;ble MLA of Amudalavalasa, Shri Kuna Ravi Kumar Garu</li>
-        </ul>
-      </div>
-
-      <p>
-        INCH X INTERIO has also received multiple testimonials, appreciations, and acknowledgements from clients, vendors, and partner companies, reinforcing its dedication to delivering excellence in every project, from concept to completion.
-      </p>
-
-      <p>
-        With a strong technical backbone led by a civil engineer based in the USA holding a master&apos;s degree and international experience, INCH X INTERIO blends global engineering standards with practical on-ground execution capabilities.
-      </p>
-
-      <p>
-        At its core, INCH X INTERIO is committed to transforming spaces through intelligent planning, refined detailing, and uncompromising execution, creating environments that are not only visually compelling but also structurally efficient, functional, and enduring.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<section className="founders-update" aria-label="Founders of INCH X INTERIO">
-  <div className="founders-inner-update">
-    <header className="founders-head-update">
-      <span className="founders-label-update">Leadership</span>
-      <h2 className="founders-title-update">Meet the Founders</h2>
-      <p className="founders-subtitle-update">
-        The people behind INCH X INTERIO, bringing together design vision, technical strength, and execution excellence.
-      </p>
-    </header>
-
-    <div className="founders-grid-update">
-      <article className="founder-card-update">
-        <div className="founder-image-wrap-update">
-          <img
-            src="/Images/kalki1.jpeg"
-            alt="Kalkinadh Oneness Kanna"
-            className="founder-image-update"
-          />
+          <div className="about-simple-highlight">
+            <span className="about-simple-highlight-value">360°</span>
+            <span className="about-simple-highlight-text">Design & Execution</span>
+          </div>
         </div>
 
-        <div className="founder-content-update">
-          <span className="founder-tag-update">Founder & Principal Designer</span>
-          <h3 className="founder-name-update">Kalkinadh Oneness (Kanna)</h3>
-
-          <p className="founder-text-update">
-            Kalkinadh Oneness (Kanna) is the Founder and Principal Designer of INCH X INTERIO, a design and execution studio dedicated to transforming ideas into thoughtfully crafted spaces that balance functionality, aesthetics, and precision.
+        <div className={`about-simple-content ${showFullAbout ? "is-expanded" : ""}`}>
+          <p>
+            Founded on 12th December 2022, INCH X INTERIO is a young and dynamic interior design and execution studio driven by ambition, precision, and creativity. Built on a shared vision between two passionate professionals, an Executive Diploma holder in Interior Designing and a Civil Engineer with international exposure in the United States, the studio brings together design sensibility and technical excellence under one roof.
           </p>
 
-          <p className="founder-text-update">
-            With a diverse academic background that includes a Bachelor&apos;s degree and an MBA, he brings a strong foundation in both business understanding and creative thinking. Driven by a passion for spatial design, he further pursued an Executive Diploma in Interior Designing, formally stepping into the field of interiors with a clear vision to build meaningful and experience-driven spaces.
+          <p>
+            From the very beginning, INCH X INTERIO has focused on delivering thoughtfully crafted spaces that balance aesthetics, functionality, and structural integrity. With expertise across both commercial and domestic sectors, the studio has successfully executed a growing portfolio of projects that reflect innovation, attention to detail, and client-centric design solutions.
           </p>
 
-          <p className="founder-text-update">
-            Kanna is deeply involved in every stage of the project journey, from initial client interaction and concept development to design execution and final handover. He is the key point of contact for clients, ensuring smooth communication, clarity, and accessibility throughout the entire process.
-          </p>
+          {!showFullAbout && (
+            <div className="about-simple-fade">
+              <button
+                type="button"
+                className="about-simple-read-btn"
+                onClick={() => setShowFullAbout(true)}
+                aria-expanded={showFullAbout}
+              >
+                Read More
+                <span>→</span>
+              </button>
+            </div>
+          )}
 
-          <p className="founder-text-update">
-            He plays a central role in translating client visions into reality, overseeing design direction, spatial planning, and the development of 2D layouts and 3D visualizations. His hands-on approach ensures that every project moves seamlessly from concept to execution with attention to detail and design intent.
-          </p>
+          {showFullAbout && (
+            <div className="about-simple-more">
+              <p>
+                Working closely with interior vendors, contractors, and execution partners, the firm has built strong collaborations across the industry, enabling seamless delivery of turnkey and design-build projects. This collaborative ecosystem has allowed INCH X INTERIO to contribute to a diverse range of residential interiors, commercial spaces, and customized design executions with consistency and quality.
+              </p>
 
-          <p className="founder-text-update">
-            Known for his client-centric approach, Kanna focuses on understanding each client&apos;s lifestyle, needs, and aspirations, shaping them into personalized design solutions. Through his leadership, INCH X INTERIO continues to deliver spaces that are visually refined, practical, functional, and aligned with the client&apos;s vision from concept to completion.
-          </p>
+              <p>
+                As part of continuous learning and global exposure, the team has traveled to Dubai, China, Thailand, and other international destinations, exploring design innovation, materials, and architectural practices to bring global standards into local execution. These experiences help the studio understand diverse architectural styles, material innovations, and execution techniques, which are thoughtfully integrated into its projects.
+              </p>
+
+              <p>
+                Over a short span, the studio has received appreciation from leading industry partners, including recognition from one of India&apos;s largest plywood companies with a strong international presence in Dubai. These acknowledgements stand as a testament to the firm&apos;s commitment to quality, reliability, and design excellence.
+              </p>
+
+              <p>
+                INCH X INTERIO is also proudly associated with BNI, further strengthening its presence within the architecture and design community and enabling stronger industry collaboration and visibility.
+              </p>
+
+              <p>
+                The founders have actively participated in several design, architecture, and entrepreneurship conferences across Mumbai, Bangalore, and Hyderabad, gaining valuable exposure to evolving global design trends, construction technologies, and innovative material applications. This continuous engagement with the industry has helped shape a forward-thinking and adaptable design approach.
+              </p>
+
+              <p>
+                The journey of INCH X INTERIO as emerging entrepreneurs was further recognized when the founders were invited by GMR Deemed to be University on the occasion of World Entrepreneur Day, where they were honored as young entrepreneurs for their contribution to the design and construction field.
+              </p>
+
+              
+
+              <p>
+                INCH X INTERIO has also received multiple testimonials, appreciations, and acknowledgements from clients, vendors, and partner companies, reinforcing its dedication to delivering excellence in every project, from concept to completion.
+              </p>
+
+              <p>
+                With a strong technical backbone led by a civil engineer based in the USA holding a master&apos;s degree and international experience, INCH X INTERIO blends global engineering standards with practical on-ground execution capabilities.
+              </p>
+
+              <p>
+                At its core, INCH X INTERIO is committed to transforming spaces through intelligent planning, refined detailing, and uncompromising execution, creating environments that are not only visually compelling but also structurally efficient, functional, and enduring.
+              </p>
+
+              <div className="about-simple-actions">
+                <button
+                  type="button"
+                  className="about-simple-read-btn about-simple-read-btn-light"
+                  onClick={() => setShowFullAbout(false)}
+                  aria-expanded={showFullAbout}
+                >
+                  Show Less
+                  <span>↑</span>
+                </button>
+              </div>
+            </div>
+          )}
         </div>
-      </article>
+      </div>
+    </section>
 
-      <article className="founder-card-update">
-        <div className="founder-image-wrap-update">
-          <img
-            src="/Images/hari.jpeg"
-            alt="Hari Krishna Boddu"
-            className="founder-image-update"
-          />
+
+
+ 
+
+    <section className="founders-update" aria-label="Founders of INCH X INTERIO">
+      <div className="founders-inner-update">
+        <header className="founders-head-update">
+          <span className="founders-label-update">Leadership</span>
+          <h2 className="founders-title-update">Meet the Founders</h2>
+          <p className="founders-subtitle-update">
+            The people behind INCH X INTERIO, bringing together design vision, technical strength, and execution excellence.
+          </p>
+        </header>
+
+        <div className="founders-grid-update">
+          <article className={`founder-card-update ${expandedFounder.kanna ? "is-expanded" : ""}`}>
+            <div className="founder-image-wrap-update">
+              <img
+                src="/Images/kalki3.jpeg"
+                alt="Kalkinadh Oneness Kanna"
+                className="founder-image-update"
+              />
+            </div>
+
+            <div className="founder-content-update">
+              <span className="founder-tag-update">Founder & Principal Designer</span>
+              <h3 className="founder-name-update">Kalkinadh Oneness (Kanna)</h3>
+
+              <p className="founder-text-update">
+                Kalkinadh Oneness (Kanna) is the Founder and Principal Designer of INCH X INTERIO, a design and execution studio dedicated to transforming ideas into thoughtfully crafted spaces that balance functionality, aesthetics, and precision.
+              </p>
+
+              <p className="founder-text-update">
+                With a diverse academic background that includes a Bachelor&apos;s degree and an MBA, he brings a strong foundation in both business understanding and creative thinking. Driven by a passion for spatial design, he further pursued an Executive Diploma in Interior Designing, formally stepping into the field of interiors with a clear vision to build meaningful and experience-driven spaces.
+              </p>
+
+              {!expandedFounder.kanna && (
+                <div className="founder-read-wrap-update">
+                  <button
+                    type="button"
+                    className="founder-read-btn-update"
+                    onClick={() =>
+                      setExpandedFounder((prev) => ({
+                        ...prev,
+                        kanna: true,
+                      }))
+                    }
+                    aria-expanded={expandedFounder.kanna}
+                  >
+                    Read More
+                    <span>→</span>
+                  </button>
+                </div>
+              )}
+
+              {expandedFounder.kanna && (
+                <div className="founder-more-update">
+                  <p className="founder-text-update">
+                    Kanna is deeply involved in every stage of the project journey, from initial client interaction and concept development to design execution and final handover. He is the key point of contact for clients, ensuring smooth communication, clarity, and accessibility throughout the entire process.
+                  </p>
+
+                  <p className="founder-text-update">
+                    He plays a central role in translating client visions into reality, overseeing design direction, spatial planning, and the development of 2D layouts and 3D visualizations. His hands-on approach ensures that every project moves seamlessly from concept to execution with attention to detail and design intent.
+                  </p>
+
+                  <p className="founder-text-update">
+                    Known for his client-centric approach, Kanna focuses on understanding each client&apos;s lifestyle, needs, and aspirations, shaping them into personalized design solutions. Through his leadership, INCH X INTERIO continues to deliver spaces that are visually refined, practical, functional, and aligned with the client&apos;s vision from concept to completion.
+                  </p>
+
+                  <div className="founder-action-update">
+                    <button
+                      type="button"
+                      className="founder-read-btn-update founder-read-btn-light-update"
+                      onClick={() =>
+                        setExpandedFounder((prev) => ({
+                          ...prev,
+                          kanna: false,
+                        }))
+                      }
+                      aria-expanded={expandedFounder.kanna}
+                    >
+                      Show Less
+                      <span>↑</span>
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </article>
+
+          <article className={`founder-card-update ${expandedFounder.hari ? "is-expanded" : ""}`}>
+            <div className="founder-image-wrap-update">
+              <img
+                src="/Images/hari.jpeg"
+                alt="Hari Krishna Boddu"
+                className="founder-image-update"
+              />
+            </div>
+
+            <div className="founder-content-update">
+              <span className="founder-tag-update">Co-Founder & Principal Engineer</span>
+              <h3 className="founder-name-update">Hari Krishna Boddu</h3>
+
+              <p className="founder-text-update">
+                Hari Krishna Boddu is the Co-Founder of INCH X INTERIO, bringing strong technical expertise, international academic exposure, and execution-focused leadership to the studio. With a background in Civil Engineering, he strengthens the firm&apos;s foundation in construction, engineering precision, and project execution.
+              </p>
+
+              <p className="founder-text-update">
+                He completed his Bachelor&apos;s degree in Civil Engineering in India, developing a solid understanding of structural systems, site execution, and construction methodologies. With a vision to expand his global perspective, he pursued his Master&apos;s degree at the University of Central Missouri, USA, where he gained advanced knowledge and exposure to international standards in engineering and project management.
+              </p>
+
+              {!expandedFounder.hari && (
+                <div className="founder-read-wrap-update">
+                  <button
+                    type="button"
+                    className="founder-read-btn-update"
+                    onClick={() =>
+                      setExpandedFounder((prev) => ({
+                        ...prev,
+                        hari: true,
+                      }))
+                    }
+                    aria-expanded={expandedFounder.hari}
+                  >
+                    Read More
+                    <span>→</span>
+                  </button>
+                </div>
+              )}
+
+              {expandedFounder.hari && (
+                <div className="founder-more-update">
+                  <p className="founder-text-update">
+                    Currently working in the United States, he brings valuable global industry experience to INCH X INTERIO, contributing insights from real-world engineering practices and modern construction systems. His exposure to international projects allows the studio to integrate practical, scalable, and globally relevant execution methods into its design process.
+                  </p>
+
+                  <p className="founder-text-update">
+                    Beyond engineering, he also supports the studio in digital presence, marketing direction, and brand development, helping strengthen client communication and outreach strategies. His involvement ensures that INCH X INTERIO maintains a modern, well-positioned, and digitally active identity.
+                  </p>
+
+                  <p className="founder-text-update">
+                    With experience spanning from ground-level construction to international engineering environments, he brings a practical and solution-oriented mindset to every project. His focus on execution quality, technical accuracy, and real-world feasibility complements the studio&apos;s design vision.
+                  </p>
+
+                  <div className="founder-action-update">
+                    <button
+                      type="button"
+                      className="founder-read-btn-update founder-read-btn-light-update"
+                      onClick={() =>
+                        setExpandedFounder((prev) => ({
+                          ...prev,
+                          hari: false,
+                        }))
+                      }
+                      aria-expanded={expandedFounder.hari}
+                    >
+                      Show Less
+                      <span>↑</span>
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          </article>
         </div>
-
-        <div className="founder-content-update">
-          <span className="founder-tag-update">Co-Founder & Principal Engineer</span>
-          <h3 className="founder-name-update">Hari Krishna Boddu</h3>
-
-          <p className="founder-text-update">
-            Hari Krishna Boddu is the Co-Founder of INCH X INTERIO, bringing strong technical expertise, international academic exposure, and execution-focused leadership to the studio. With a background in Civil Engineering, he strengthens the firm&apos;s foundation in construction, engineering precision, and project execution.
-          </p>
-
-          <p className="founder-text-update">
-            He completed his Bachelor&apos;s degree in Civil Engineering in India, developing a solid understanding of structural systems, site execution, and construction methodologies. With a vision to expand his global perspective, he pursued his Master&apos;s degree at the University of Central Missouri, USA, where he gained advanced knowledge and exposure to international standards in engineering and project management.
-          </p>
-
-          <p className="founder-text-update">
-            Currently working in the United States, he brings valuable global industry experience to INCH X INTERIO, contributing insights from real-world engineering practices and modern construction systems. His exposure to international projects allows the studio to integrate practical, scalable, and globally relevant execution methods into its design process.
-          </p>
-
-          <p className="founder-text-update">
-            Beyond engineering, he also supports the studio in digital presence, marketing direction, and brand development, helping strengthen client communication and outreach strategies. His involvement ensures that INCH X INTERIO maintains a modern, well-positioned, and digitally active identity.
-          </p>
-
-          <p className="founder-text-update">
-            With experience spanning from ground-level construction to international engineering environments, he brings a practical and solution-oriented mindset to every project. His focus on execution quality, technical accuracy, and real-world feasibility complements the studio&apos;s design vision.
-          </p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
 
 <section className="philosophy-update" aria-label="INCH X INTERIO philosophy">
@@ -468,7 +578,7 @@ export default function About() {
           </div>
         </section> */}
 
-        <section className="about8-s4" aria-label="Photo strip">
+        {/*<section className="about8-s4" aria-label="Photo strip">
           <div className="about8-container">
             <div className="about8-s4-grid">
               <div className="about8-s4-copy">
@@ -511,7 +621,7 @@ export default function About() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/*<section className="about8-s5" aria-label="Contact">
           <div className="about8-container">
