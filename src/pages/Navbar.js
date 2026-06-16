@@ -66,7 +66,7 @@ function Navbar() {
           <Link to="/" className="brand" onClick={handleLinkClick} aria-label="InchX Interio Home">
             <img className="brand-logo1" src="/Images/main-logo-update.png" alt="InchX Interio Logo" />
             <span className="brand-copy">
-              <span className="brand-name">Inch X Interio</span>
+              <span className="brand-name">InchX Interio</span>
               <span className="brand-tagline">Excellence at your door step</span>
             </span>
           </Link>

@@ -35,7 +35,7 @@ export default function About() {
     number: "",
     title: "Elevating Everyday Living",
     icon: "/Images/copy4.jpg",
-    text: "At INCH X INTERIO, we believe luxury is not just appearance, it is experience, comfort, and detail. Through careful planning, refined materials, and precise execution, we elevate everyday spaces into environments that feel purposeful, elegant, and complete."
+    text: "At INCHX INTERIO, we believe luxury is not just appearance, it is experience, comfort, and detail. Through careful planning, refined materials, and precise execution, we elevate everyday spaces into environments that feel purposeful, elegant, and complete."
   }
 ];
   return (
@@ -46,7 +46,7 @@ export default function About() {
         <section className="about-main-hero-image-section">
           <img
             src="/Images/about-main-hero-5.png"
-            alt="About Inch X Interio"
+            alt="About InchX Interio"
             className="about-main-hero-image"
           />
         </section>
@@ -81,10 +81,10 @@ export default function About() {
  
 
  
-    <section className="about-simple-section" aria-label="About INCH X INTERIO">
+    <section className="about-simple-section" aria-label="About INCHX INTERIO">
       <div className="about-simple-inner">
         <header className="about-simple-head">
-          <span className="about-simple-label">About INCH X INTERIO</span>
+          <span className="about-simple-label">About INCHX INTERIO</span>
           <h2 className="about-simple-title">
             A young and dynamic interior design studio built on precision, creativity, and execution.
           </h2>
@@ -114,11 +114,11 @@ export default function About() {
 
         <div className={`about-simple-content ${showFullAbout ? "is-expanded" : ""}`}>
           <p>
-            Founded on 12th December 2022, INCH X INTERIO is a young and dynamic interior design and execution studio driven by ambition, precision, and creativity. Built on a shared vision between two passionate professionals, an Executive Diploma holder in Interior Designing and a Civil Engineer with international exposure in the United States, the studio brings together design sensibility and technical excellence under one roof.
+            Founded on 12th December 2022, INCHX INTERIO is a young and dynamic interior design and execution studio driven by ambition, precision, and creativity. Built on a shared vision between two passionate professionals, an Executive Diploma holder in Interior Designing and a Civil Engineer with international exposure in the United States, the studio brings together design sensibility and technical excellence under one roof.
           </p>
 
           <p>
-            From the very beginning, INCH X INTERIO has focused on delivering thoughtfully crafted spaces that balance aesthetics, functionality, and structural integrity. With expertise across both commercial and domestic sectors, the studio has successfully executed a growing portfolio of projects that reflect innovation, attention to detail, and client-centric design solutions.
+            From the very beginning, INCHX INTERIO has focused on delivering thoughtfully crafted spaces that balance aesthetics, functionality, and structural integrity. With expertise across both commercial and domestic sectors, the studio has successfully executed a growing portfolio of projects that reflect innovation, attention to detail, and client-centric design solutions.
           </p>
 
           {!showFullAbout && (
@@ -138,7 +138,7 @@ export default function About() {
           {showFullAbout && (
             <div className="about-simple-more">
               <p>
-                Working closely with interior vendors, contractors, and execution partners, the firm has built strong collaborations across the industry, enabling seamless delivery of turnkey and design-build projects. This collaborative ecosystem has allowed INCH X INTERIO to contribute to a diverse range of residential interiors, commercial spaces, and customized design executions with consistency and quality.
+                Working closely with interior vendors, contractors, and execution partners, the firm has built strong collaborations across the industry, enabling seamless delivery of turnkey and design-build projects. This collaborative ecosystem has allowed INCHX INTERIO to contribute to a diverse range of residential interiors, commercial spaces, and customized design executions with consistency and quality.
               </p>
 
               <p>
@@ -150,7 +150,7 @@ export default function About() {
               </p>
 
               <p>
-                INCH X INTERIO is also proudly associated with BNI, further strengthening its presence within the architecture and design community and enabling stronger industry collaboration and visibility.
+                INCHX INTERIO is also proudly associated with BNI, further strengthening its presence within the architecture and design community and enabling stronger industry collaboration and visibility.
               </p>
 
               <p>
@@ -158,21 +158,21 @@ export default function About() {
               </p>
 
               <p>
-                The journey of INCH X INTERIO as emerging entrepreneurs was further recognized when the founders were invited by GMR Deemed to be University on the occasion of World Entrepreneur Day, where they were honored as young entrepreneurs for their contribution to the design and construction field.
+                The journey of INCHX INTERIO as emerging entrepreneurs was further recognized when the founders were invited by GMR Deemed to be University on the occasion of World Entrepreneur Day, where they were honored as young entrepreneurs for their contribution to the design and construction field.
               </p>
 
               
 
               <p>
-                INCH X INTERIO has also received multiple testimonials, appreciations, and acknowledgements from clients, vendors, and partner companies, reinforcing its dedication to delivering excellence in every project, from concept to completion.
+                INCHX INTERIO has also received multiple testimonials, appreciations, and acknowledgements from clients, vendors, and partner companies, reinforcing its dedication to delivering excellence in every project, from concept to completion.
               </p>
 
               <p>
-                With a strong technical backbone led by a civil engineer based in the USA holding a master&apos;s degree and international experience, INCH X INTERIO blends global engineering standards with practical on-ground execution capabilities.
+                With a strong technical backbone led by a civil engineer based in the USA holding a master&apos;s degree and international experience, INCHX INTERIO blends global engineering standards with practical on-ground execution capabilities.
               </p>
 
               <p>
-                At its core, INCH X INTERIO is committed to transforming spaces through intelligent planning, refined detailing, and uncompromising execution, creating environments that are not only visually compelling but also structurally efficient, functional, and enduring.
+                At its core, INCHX INTERIO is committed to transforming spaces through intelligent planning, refined detailing, and uncompromising execution, creating environments that are not only visually compelling but also structurally efficient, functional, and enduring.
               </p>
 
               <div className="about-simple-actions">
@@ -202,7 +202,7 @@ export default function About() {
           <span className="founders-label-update">Leadership</span>
           <h2 className="founders-title-update">Meet the Founders</h2>
           <p className="founders-subtitle-update">
-            The people behind INCH X INTERIO, bringing together design vision, technical strength, and execution excellence.
+            The people behind INCHX INTERIO, bringing together design vision, technical strength, and execution excellence.
           </p>
         </header>
 
@@ -221,7 +221,7 @@ export default function About() {
               <h3 className="founder-name-update">Kalkinadh Oneness (Kanna)</h3>
 
               <p className="founder-text-update">
-                Kalkinadh Oneness (Kanna) is the Founder and Principal Designer of INCH X INTERIO, a design and execution studio dedicated to transforming ideas into thoughtfully crafted spaces that balance functionality, aesthetics, and precision.
+                Kalkinadh Oneness (Kanna) is the Founder and Principal Designer of INCHX INTERIO, a design and execution studio dedicated to transforming ideas into thoughtfully crafted spaces that balance functionality, aesthetics, and precision.
               </p>
 
               <p className="founder-text-update">
@@ -258,7 +258,7 @@ export default function About() {
                   </p>
 
                   <p className="founder-text-update">
-                    Known for his client-centric approach, Kanna focuses on understanding each client&apos;s lifestyle, needs, and aspirations, shaping them into personalized design solutions. Through his leadership, INCH X INTERIO continues to deliver spaces that are visually refined, practical, functional, and aligned with the client&apos;s vision from concept to completion.
+                    Known for his client-centric approach, Kanna focuses on understanding each client&apos;s lifestyle, needs, and aspirations, shaping them into personalized design solutions. Through his leadership, INCHX INTERIO continues to deliver spaces that are visually refined, practical, functional, and aligned with the client&apos;s vision from concept to completion.
                   </p>
 
                   <div className="founder-action-update">
@@ -296,7 +296,7 @@ export default function About() {
               <h3 className="founder-name-update">Hari Krishna Boddu</h3>
 
               <p className="founder-text-update">
-                Hari Krishna Boddu is the Co-Founder of INCH X INTERIO, bringing strong technical expertise, international academic exposure, and execution-focused leadership to the studio. With a background in Civil Engineering, he strengthens the firm&apos;s foundation in construction, engineering precision, and project execution.
+                Hari Krishna Boddu is the Co-Founder of INCHX INTERIO, bringing strong technical expertise, international academic exposure, and execution-focused leadership to the studio. With a background in Civil Engineering, he strengthens the firm&apos;s foundation in construction, engineering precision, and project execution.
               </p>
 
               <p className="founder-text-update">
@@ -325,11 +325,11 @@ export default function About() {
               {expandedFounder.hari && (
                 <div className="founder-more-update">
                   <p className="founder-text-update">
-                    Currently working in the United States, he brings valuable global industry experience to INCH X INTERIO, contributing insights from real-world engineering practices and modern construction systems. His exposure to international projects allows the studio to integrate practical, scalable, and globally relevant execution methods into its design process.
+                    Currently working in the United States, he brings valuable global industry experience to INCHX INTERIO, contributing insights from real-world engineering practices and modern construction systems. His exposure to international projects allows the studio to integrate practical, scalable, and globally relevant execution methods into its design process.
                   </p>
 
                   <p className="founder-text-update">
-                    Beyond engineering, he also supports the studio in digital presence, marketing direction, and brand development, helping strengthen client communication and outreach strategies. His involvement ensures that INCH X INTERIO maintains a modern, well-positioned, and digitally active identity.
+                    Beyond engineering, he also supports the studio in digital presence, marketing direction, and brand development, helping strengthen client communication and outreach strategies. His involvement ensures that INCHX INTERIO maintains a modern, well-positioned, and digitally active identity.
                   </p>
 
                   <p className="founder-text-update">
@@ -367,7 +367,7 @@ export default function About() {
       <span className="philosophy-label-update">Philosophy</span>
       <h2 className="philosophy-title-update">Designs shaped by vision, function, and emotion.</h2>
       <p className="philosophy-subtitle-update">
-        At INCH X INTERIO, our designs are more than spaces. They are stories crafted to resonate with those who experience them.
+        At INCHX INTERIO, our designs are more than spaces. They are stories crafted to resonate with those who experience them.
       </p>
     </header>
 

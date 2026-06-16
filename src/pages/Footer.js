@@ -8,7 +8,8 @@ import {
   FaYoutube,
   FaPhoneAlt,
   FaEnvelope,
-  FaMapMarkerAlt
+  FaMapMarkerAlt,
+  FaPinterest
 } from "react-icons/fa";
 import "./Footer.css";
 
@@ -147,24 +148,26 @@ function Footer() {
             <a href="/" className="footer-brand-link-final" aria-label="InchX Interio Home">
               <img className="brand-logo3-final" src="/Images/main-logo-update.png" alt="InchX Interio Logo" />
               <span className="brand-text-wrap-final">
-                <span className="brand-title-final">InchX Interio</span>
-                <span className="brand-subtitle-final">Excellence at your door step</span>
               </span>
             </a>
 
             <div className="brand-social-final" aria-label="Social media links">
-              <a href="https://www.facebook.com/" className="social-btn-final" aria-label="Facebook" target="_blank" rel="noreferrer">
+              <a href="https://www.facebook.com/inchxinterio" className="social-btn-final" aria-label="Facebook" target="_blank" rel="noreferrer">
                 <FaFacebookF />
               </a>
-              <a href="https://www.instagram.com/inchx_interio/" className="social-btn-final" aria-label="Instagram" target="_blank" rel="noreferrer">
+              <a href="https://www.instagram.com/inchxinterio" className="social-btn-final" aria-label="Instagram" target="_blank" rel="noreferrer">
                 <FaInstagram />
               </a>
               <a href="https://www.linkedin.com/in/inchxinterio?utm_source=share_via&utm_content=profile&utm_medium=member_ios" className="social-btn-final" aria-label="LinkedIn" target="_blank" rel="noreferrer">
                 <FaLinkedinIn />
               </a>
-              <a href="https://www.youtube.com/" className="social-btn-final" aria-label="YouTube" target="_blank" rel="noreferrer">
+              <a href="https://www.youtube.com/@INCHXINTERIO" className="social-btn-final" aria-label="YouTube" target="_blank" rel="noreferrer">
                 <FaYoutube />
               </a>
+              <a href="https://in.pinterest.com/inchxinterio/" className="social-btn-final" aria-label="Pinterest" target="_blank" rel="noreferrer">
+                <FaPinterest />
+              </a>
+
             </div>
           </div>
 

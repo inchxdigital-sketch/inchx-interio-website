@@ -140,7 +140,7 @@ export default function Contact() {
 
               <a
                 className="contact8-card"
-                href="https://instagram.com/inchx_interio"
+                href="https://www.instagram.com/inchxinterio/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
