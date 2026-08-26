@@ -85,20 +85,20 @@ function Gallery() {
       },
       {
         key: "ceiling",
-        label: "False Ceiling",
+        label: "Poooja Mandir",
         images: [
-          "/Images/gallery/ceiling-13.jpeg",
-          "/Images/gallery/ceiling-14.jpeg",
-          "/Images/gallery/ceiling-15.jpeg",
-          "/Images/gallery/ceiling-16.jpeg",
-          "/Images/gallery/ceiling-17.jpeg",
-          "/Images/gallery/ceiling-18.jpeg",
-          "/Images/gallery/ceiling-19.jpeg",
-          "/Images/gallery/ceiling-20.jpeg",
-          "/Images/gallery/ceiling-9.jpeg",
-          "/Images/gallery/ceiling-10.jpeg",
-          "/Images/gallery/ceiling-11.jpeg",
-          "/Images/gallery/ceiling-12.jpeg",
+          "/Images/gallery/mandir1.jpeg",
+          "/Images/gallery/mandir3.jpeg",
+          "/Images/gallery/mandir2.jpeg",
+          "/Images/gallery/mandir4.jpeg",
+          "/Images/gallery/mandir6.jpeg",
+          "/Images/gallery/mandir7.jpeg",
+          "/Images/gallery/mandir5.jpeg",
+          "/Images/gallery/mandir9.jpeg",
+          "/Images/gallery/mandir8.jpeg",
+          "/Images/gallery/mandir10.jpeg",
+          "/Images/gallery/mandir11.jpeg",
+         
 
         ]
       }
